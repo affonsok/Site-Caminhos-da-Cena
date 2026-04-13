@@ -69,13 +69,16 @@ export function Header() {
         </nav>
 
         <Sheet>
-          <SheetTrigger className="md:hidden" asChild>
-            <div className={isScrolled ? "text-black" : "text-white"}>
-              <Button variant="ghost" size="icon" className="hover:bg-transparent">
-                <Menu className="h-6 w-6" />
-              </Button>
-            </div>
-          </SheetTrigger>
+          <SheetTrigger
+            className="md:hidden"
+            render={
+              <div className={isScrolled ? "text-black" : "text-white"}>
+                <Button variant="ghost" size="icon" className="hover:bg-transparent">
+                  <Menu className="h-6 w-6" />
+                </Button>
+              </div>
+            }
+          />
           <SheetContent side="right" className="w-[300px] sm:w-[400px]">
             <nav className="flex flex-col space-y-6 mt-12">
               {navItems.map((item) => (
