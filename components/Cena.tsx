@@ -17,7 +17,7 @@ export function Cena() {
             className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl"
           >
             <Image
-              src="https://picsum.photos/seed/scene/800/1000"
+              src="/images/layout/scene.jpg"
               alt="A Cena"
               fill
               className="object-cover"

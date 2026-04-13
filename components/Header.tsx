@@ -2,6 +2,7 @@
 
 import * as React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
@@ -38,12 +39,24 @@ export function Header() {
       )}
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
-        <Link href="/" className="text-2xl font-serif font-bold tracking-tighter">
-          PALCO & CENA
+        <Link href="/" className="inline-flex items-center">
+          <Image 
+            src="/images/layout/logo.svg" 
+            alt="Caminhos da Cena" 
+            width={300} 
+            height={50} 
+            className={cn(
+              "h-8 w-auto object-contain transition-all duration-300",
+              isScrolled ? "brightness-0" : "brightness-0 invert"
+            )} 
+          />
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center space-x-8">
+        <nav className={cn(
+          "hidden md:flex items-center space-x-8",
+          isScrolled ? "text-black" : "text-white"
+        )}>
           {navItems.map((item) => (
             <Link
               key={item.name}
@@ -55,16 +68,14 @@ export function Header() {
           ))}
         </nav>
 
-        {/* Mobile Nav */}
         <Sheet>
-          <SheetTrigger
-            className="md:hidden"
-            render={
-              <Button variant="ghost" size="icon">
+          <SheetTrigger className="md:hidden" asChild>
+            <div className={isScrolled ? "text-black" : "text-white"}>
+              <Button variant="ghost" size="icon" className="hover:bg-transparent">
                 <Menu className="h-6 w-6" />
               </Button>
-            }
-          />
+            </div>
+          </SheetTrigger>
           <SheetContent side="right" className="w-[300px] sm:w-[400px]">
             <nav className="flex flex-col space-y-6 mt-12">
               {navItems.map((item) => (

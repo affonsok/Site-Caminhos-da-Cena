@@ -10,37 +10,37 @@ const members = [
   {
     name: 'Helena Soares',
     role: 'Diretora Artística',
-    image: 'https://picsum.photos/seed/person1/400/500',
+    image: '/images/integrantes/person1.jpg',
     instagram: 'https://instagram.com/helenasoares',
   },
   {
     name: 'Ricardo Mendes',
     role: 'Ator & Preparador Corporal',
-    image: 'https://picsum.photos/seed/person2/400/500',
+    image: '/images/integrantes/person2.jpg',
     instagram: 'https://instagram.com/ricardomendes',
   },
   {
     name: 'Ana Paula Luz',
     role: 'Atriz & Dramaturga',
-    image: 'https://picsum.photos/seed/person3/400/500',
+    image: '/images/integrantes/person3.jpg',
     instagram: 'https://instagram.com/anapaulaluz',
   },
   {
     name: 'Bruno Costa',
     role: 'Cenógrafo',
-    image: 'https://picsum.photos/seed/person4/400/500',
+    image: '/images/integrantes/person4.jpg',
     instagram: 'https://instagram.com/brunocosta',
   },
   {
     name: 'Carla Dias',
     role: 'Iluminadora',
-    image: 'https://picsum.photos/seed/person5/400/500',
+    image: '/images/integrantes/person5.jpg',
     instagram: 'https://instagram.com/carladias',
   },
   {
     name: 'Marcos Viana',
     role: 'Ator',
-    image: 'https://picsum.photos/seed/person6/400/500',
+    image: '/images/integrantes/person6.jpg',
     instagram: 'https://instagram.com/marcosviana',
   },
 ];

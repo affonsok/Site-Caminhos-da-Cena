@@ -9,20 +9,20 @@ const news = [
   {
     date: '12 Abr, 2024',
     title: 'Nova oficina de interpretação abre inscrições para o próximo mês',
-    excerpt: 'O grupo Palco & Cena abre as portas para novos talentos com uma oficina intensiva focada em teatro físico.',
-    image: 'https://picsum.photos/seed/news1/800/600',
+    excerpt: 'O grupo Caminhos da Cena abre as portas para novos talentos com uma oficina intensiva focada em teatro físico.',
+    image: '/images/noticias/news1.jpg',
   },
   {
     date: '05 Abr, 2024',
-    title: 'Palco & Cena recebe prêmio de melhor produção experimental',
+    title: 'Caminhos da Cena recebe prêmio de melhor produção experimental',
     excerpt: 'Nosso último espetáculo "Fragmentos de Ontem" foi laureado no festival nacional de artes cênicas.',
-    image: 'https://picsum.photos/seed/news2/800/600',
+    image: '/images/noticias/news2.jpg',
   },
   {
     date: '28 Mar, 2024',
     title: 'Turnê europeia confirmada para o segundo semestre',
     excerpt: 'Levaremos a cultura brasileira para os palcos de Portugal, Espanha e França em uma jornada de 3 meses.',
-    image: 'https://picsum.photos/seed/news3/800/600',
+    image: '/images/noticias/news3.jpg',
   },
 ];
 

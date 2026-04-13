@@ -9,7 +9,7 @@ const clippings = [
     source: 'Jornal de Artes',
     title: '"Uma explosão de criatividade e técnica no palco"',
     date: 'Março 2024',
-    content: 'O grupo Palco & Cena demonstra uma maturidade artística rara, equilibrando perfeitamente a experimentação visual com uma dramaturgia sólida e emocionante.',
+    content: 'O grupo Caminhos da Cena demonstra uma maturidade artística rara, equilibrando perfeitamente a experimentação visual com uma dramaturgia sólida e emocionante.',
   },
   {
     source: 'Revista Cultura Viva',

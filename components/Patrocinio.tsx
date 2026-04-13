@@ -5,11 +5,11 @@ import Image from 'next/image';
 import { motion } from 'motion/react';
 
 const sponsors = [
-  { name: 'Cultura Brasil', logo: 'https://picsum.photos/seed/logo1/200/100' },
-  { name: 'Banco das Artes', logo: 'https://picsum.photos/seed/logo2/200/100' },
-  { name: 'Fundação Palco', logo: 'https://picsum.photos/seed/logo3/200/100' },
-  { name: 'Prefeitura Municipal', logo: 'https://picsum.photos/seed/logo4/200/100' },
-  { name: 'Incentivo Federal', logo: 'https://picsum.photos/seed/logo5/200/100' },
+  { name: 'Cultura Brasil', logo: '/images/patrocinadores/sponsor1.jpg' },
+  { name: 'Banco das Artes', logo: '/images/patrocinadores/sponsor2.jpg' },
+  { name: 'Fundação Palco', logo: '/images/patrocinadores/sponsor3.jpg' },
+  { name: 'Prefeitura Municipal', logo: '/images/patrocinadores/sponsor4.jpg' },
+  { name: 'Incentivo Federal', logo: '/images/patrocinadores/sponsor5.jpg' },
 ];
 
 export function Patrocinio() {

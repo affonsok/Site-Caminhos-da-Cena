@@ -2,6 +2,7 @@
 
 import * as React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Instagram, Facebook, Youtube, Mail, Phone, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -74,8 +75,14 @@ export function Footer() {
         </div>
 
         <div className="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0">
-          <div className="text-2xl font-serif font-bold tracking-tighter">
-            PALCO & CENA
+          <div className="inline-flex items-center">
+            <Image 
+              src="/images/layout/logo.svg" 
+              alt="Caminhos da Cena" 
+              width={300} 
+              height={50} 
+              className="h-8 w-auto object-contain brightness-0 invert" 
+            />
           </div>
           
           <div className="flex space-x-6">
@@ -91,7 +98,7 @@ export function Footer() {
           </div>
 
           <div className="text-white/40 text-xs tracking-widest uppercase">
-            © 2024 Palco & Cena. Todos os direitos reservados.
+            © 2024 Caminhos da Cena. Todos os direitos reservados.
           </div>
         </div>
       </div>

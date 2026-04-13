@@ -15,8 +15,8 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: 'Palco & Cena - Grupo de Teatro',
-  description: 'Site oficial do grupo de teatro Palco & Cena. Espetáculos, notícias, integrantes e clipping.',
+  title: 'Caminhos da Cena - Grupo de Teatro',
+  description: 'Site oficial do grupo de teatro Caminhos da Cena. Espetáculos, notícias, integrantes e clipping.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

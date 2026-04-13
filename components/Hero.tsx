@@ -9,17 +9,17 @@ import { cn } from '@/lib/utils';
 
 const slides = [
   {
-    image: 'https://picsum.photos/seed/theater1/1920/1080',
+    image: '/images/espetaculos/hero1.jpg',
     title: 'A Arte de Viver o Palco',
     subtitle: 'Explorando as fronteiras da expressão humana através do teatro contemporâneo.',
   },
   {
-    image: 'https://picsum.photos/seed/theater2/1920/1080',
+    image: '/images/espetaculos/hero2.jpg',
     title: 'Novas Perspectivas',
     subtitle: 'Temporada 2024: Uma jornada por clássicos reinventados e obras inéditas.',
   },
   {
-    image: 'https://picsum.photos/seed/theater3/1920/1080',
+    image: '/images/espetaculos/hero3.jpg',
     title: 'Conexão e Emoção',
     subtitle: 'Onde cada cena conta uma história que ressoa na alma do espectador.',
   },
@@ -55,7 +55,7 @@ export function Hero() {
             priority
             referrerPolicy="no-referrer"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-black/50 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
         </motion.div>
       </AnimatePresence>
 
@@ -68,7 +68,7 @@ export function Hero() {
           className="max-w-3xl"
         >
           <span className="text-white/60 uppercase tracking-[0.3em] text-xs font-medium mb-4 block">
-            Grupo de Teatro Palco & Cena
+            Grupo de Teatro Caminhos da Cena
           </span>
           <h1 className="text-6xl md:text-8xl font-serif text-white leading-tight mb-6">
             {slides[current].title}

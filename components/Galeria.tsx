@@ -7,14 +7,14 @@ import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
 const galleryItems = [
-  { id: 1, year: '2024', title: 'Bastidores: O Grito', image: 'https://picsum.photos/seed/gal1/800/600' },
-  { id: 2, year: '2024', title: 'Ensaio Aberto', image: 'https://picsum.photos/seed/gal2/800/600' },
-  { id: 3, year: '2023', title: 'Fragmentos - Estreia', image: 'https://picsum.photos/seed/gal3/800/600' },
-  { id: 4, year: '2023', title: 'Oficina de Verão', image: 'https://picsum.photos/seed/gal4/800/600' },
-  { id: 5, year: '2023', title: 'A Dança - Turnê', image: 'https://picsum.photos/seed/gal5/800/600' },
-  { id: 6, year: '2022', title: 'Vozes da Cidade', image: 'https://picsum.photos/seed/gal6/800/600' },
-  { id: 7, year: '2022', title: 'Workshop Corporal', image: 'https://picsum.photos/seed/gal7/800/600' },
-  { id: 8, year: '2021', title: 'Retomada Pós-Pandemia', image: 'https://picsum.photos/seed/gal8/800/600' },
+  { id: 1, year: '2024', title: 'Bastidores: O Grito', image: '/images/galeria/gal1.jpg' },
+  { id: 2, year: '2024', title: 'Ensaio Aberto', image: '/images/galeria/gal2.jpg' },
+  { id: 3, year: '2023', title: 'Fragmentos - Estreia', image: '/images/galeria/gal3.jpg' },
+  { id: 4, year: '2023', title: 'Oficina de Verão', image: '/images/galeria/gal4.jpg' },
+  { id: 5, year: '2023', title: 'A Dança - Turnê', image: '/images/galeria/gal5.jpg' },
+  { id: 6, year: '2022', title: 'Vozes da Cidade', image: '/images/galeria/gal6.jpg' },
+  { id: 7, year: '2022', title: 'Workshop Corporal', image: '/images/galeria/gal7.jpg' },
+  { id: 8, year: '2021', title: 'Retomada Pós-Pandemia', image: '/images/galeria/gal8.jpg' },
 ];
 
 const years = ['Todos', '2024', '2023', '2022', '2021'];

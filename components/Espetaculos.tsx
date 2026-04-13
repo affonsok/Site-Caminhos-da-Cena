@@ -13,48 +13,48 @@ const projects = [
     title: 'O Grito do Silêncio',
     category: 'Drama Contemporâneo',
     year: '2024',
-    image: 'https://picsum.photos/seed/play1/600/800',
+    image: '/images/espetaculos/play1.jpg',
     status: 'Em Cartaz',
     gallery: [
-      'https://picsum.photos/seed/play1-1/1200/800',
-      'https://picsum.photos/seed/play1-2/1200/800',
-      'https://picsum.photos/seed/play1-3/1200/800',
+      '/images/espetaculos/play1-1.jpg',
+      '/images/espetaculos/play1-2.jpg',
+      '/images/espetaculos/play1-3.jpg',
     ]
   },
   {
     title: 'Fragmentos de Ontem',
     category: 'Experimental',
     year: '2023',
-    image: 'https://picsum.photos/seed/play2/600/800',
+    image: '/images/espetaculos/play2.jpg',
     status: 'Encerrado',
     gallery: [
-      'https://picsum.photos/seed/play2-1/1200/800',
-      'https://picsum.photos/seed/play2-2/1200/800',
-      'https://picsum.photos/seed/play2-3/1200/800',
+      '/images/espetaculos/play2-1.jpg',
+      '/images/espetaculos/play2-2.jpg',
+      '/images/espetaculos/play2-3.jpg',
     ]
   },
   {
     title: 'A Dança das Sombras',
     category: 'Teatro Físico',
     year: '2023',
-    image: 'https://picsum.photos/seed/play3/600/800',
+    image: '/images/espetaculos/play3.jpg',
     status: 'Turnê',
     gallery: [
-      'https://picsum.photos/seed/play3-1/1200/800',
-      'https://picsum.photos/seed/play3-2/1200/800',
-      'https://picsum.photos/seed/play3-3/1200/800',
+      '/images/espetaculos/play3-1.jpg',
+      '/images/espetaculos/play3-2.jpg',
+      '/images/espetaculos/play3-3.jpg',
     ]
   },
   {
     title: 'Vozes da Cidade',
     category: 'Musical',
     year: '2022',
-    image: 'https://picsum.photos/seed/play4/600/800',
+    image: '/images/espetaculos/play4.jpg',
     status: 'Encerrado',
     gallery: [
-      'https://picsum.photos/seed/play4-1/1200/800',
-      'https://picsum.photos/seed/play4-2/1200/800',
-      'https://picsum.photos/seed/play4-3/1200/800',
+      '/images/espetaculos/play4-1.jpg',
+      '/images/espetaculos/play4-2.jpg',
+      '/images/espetaculos/play4-3.jpg',
     ]
   },
 ];
