@@ -14,12 +14,12 @@ const slides = [
     subtitle: 'Explorando as fronteiras da expressão humana através do teatro contemporâneo.',
   },
   {
-    image: '/images/espetaculos/hero2.jpg',
+    image: '/images/espetaculos/hero1.jpg',
     title: 'Novas Perspectivas',
     subtitle: 'Temporada 2024: Uma jornada por clássicos reinventados e obras inéditas.',
   },
   {
-    image: '/images/espetaculos/hero3.jpg',
+    image: '/images/espetaculos/hero1.jpg',
     title: 'Conexão e Emoção',
     subtitle: 'Onde cada cena conta uma história que ressoa na alma do espectador.',
   },
