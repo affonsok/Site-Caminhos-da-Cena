@@ -25,13 +25,13 @@ export interface Espetaculo {
 
 export const espetaculos: Espetaculo[] = [
   {
-    slug: 'o-grito-do-silencio',
-    title: 'O Grito do Silêncio',
-    category: 'Drama Contemporâneo',
+    slug: 'alma-sobe-chao-desce',
+    title: 'Alma Sobe Chão Desce',
+    category: 'Comédia',
     year: '2024',
     status: 'Em Cartaz',
-    image: '/images/espetaculos/play1.jpg',
-    heroImage: '/images/espetaculos/play1.jpg',
+    image: '/images/espetaculos/almasome/20260410_205048.jpg',
+    heroImage: '/images/espetaculos/almasome/20260410_205048.jpg',
     synopsis:
       'Uma reflexão profunda sobre as vozes silenciadas em nossa sociedade contemporânea. Através de uma narrativa não-linear que entrelaça memórias e desejos reprimidos, cinco personagens confrontam seus medos mais íntimos em um espaço cênico que se transforma a cada cena. O espetáculo explora as fronteiras entre o dito e o não-dito, revelando como o silêncio pode ser, paradoxalmente, o mais alto dos gritos. Uma obra que questiona os limites da comunicação humana e nos convida a ouvir o que nunca foi pronunciado.',
     cast: [
@@ -53,9 +53,20 @@ export const espetaculos: Espetaculo[] = [
       { label: 'Produção', value: 'Caminhos da Cena Produções' },
     ],
     gallery: [
-      '/images/espetaculos/play1-1.jpg',
-      '/images/espetaculos/play1-2.jpg',
-      '/images/espetaculos/play1-3.jpg',
+      '/images/espetaculos/almasome/20260410_205048.jpg',
+      '/images/espetaculos/almasome/20260410_205213.jpg',
+      '/images/espetaculos/almasome/20260410_211201.jpg',
+      '/images/espetaculos/almasome/20260410_212036.jpg',
+      '/images/espetaculos/almasome/20260410_212805.jpg',
+      '/images/espetaculos/almasome/20260410_213312.jpg',
+      '/images/espetaculos/almasome/20260410_214222.jpg',
+      '/images/espetaculos/almasome/20260410_214825.jpg',
+      '/images/espetaculos/almasome/20260410_215126.jpg',
+      '/images/espetaculos/almasome/20260410_215204.jpg',
+      '/images/espetaculos/almasome/20260410_215209.jpg',
+      '/images/espetaculos/almasome/20260410_215211.jpg',
+      '/images/espetaculos/almasome/20260410_215217.jpg',
+      '/images/espetaculos/almasome/20260410_215858.jpg',
     ],
   },
   {
