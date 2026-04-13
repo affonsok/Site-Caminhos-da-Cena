@@ -14,8 +14,9 @@ const sponsors = [
 
 export function Patrocinio() {
   return (
-    <section className="py-20 bg-[#f8f7f5] border-y border-black/5">
+    <section aria-labelledby="patrocinio-title" className="py-20 bg-[#f8f7f5] border-y border-black/5">
       <div className="container mx-auto px-6">
+        <h2 id="patrocinio-title" className="sr-only">Patrocínio e Apoio</h2>
         <div className="text-center mb-12">
           <p className="text-[10px] uppercase tracking-[0.4em] text-black/30 font-bold">
             Patrocínio e Apoio

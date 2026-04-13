@@ -7,6 +7,7 @@ import { Noticias } from '@/components/Noticias';
 import { Galeria } from '@/components/Galeria';
 import { Clipping } from '@/components/Clipping';
 import { Patrocinio } from '@/components/Patrocinio';
+import { InstagramTicker } from '@/components/InstagramTicker';
 import { Footer } from '@/components/Footer';
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
       <Galeria />
       <Clipping />
       <Patrocinio />
+      <InstagramTicker />
       <Footer />
     </main>
   );

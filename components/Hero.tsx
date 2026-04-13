@@ -70,17 +70,17 @@ export function Hero() {
           <span className="text-white/60 uppercase tracking-[0.3em] text-xs font-medium mb-4 block">
             Grupo de Teatro Caminhos da Cena
           </span>
-          <h1 className="text-6xl md:text-8xl font-serif text-white leading-tight mb-6">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-serif text-white leading-tight mb-6 break-words">
             {slides[current].title}
           </h1>
           <p className="text-xl text-white/80 mb-10 font-light leading-relaxed max-w-xl">
             {slides[current].subtitle}
           </p>
-          <div className="flex space-x-4">
-            <Button size="lg" className="rounded-full bg-white text-black hover:bg-white/90 px-8 py-6 text-lg">
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Button size="lg" className="rounded-full bg-white text-black hover:bg-white/90 px-8 py-6 text-lg w-full sm:w-auto">
               Ver Espetáculos
             </Button>
-            <Button size="lg" variant="outline" className="rounded-full border-white text-white hover:bg-white hover:text-black px-8 py-6 text-lg">
+            <Button size="lg" variant="outline" className="rounded-full border-white text-white hover:bg-white hover:text-black px-8 py-6 text-lg w-full sm:w-auto">
               Nossa História
             </Button>
           </div>

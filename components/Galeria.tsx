@@ -80,9 +80,9 @@ export function Galeria() {
                   <span className="text-[10px] uppercase tracking-widest text-white/60 mb-1">
                     {item.year}
                   </span>
-                  <h4 className="text-white font-serif text-lg">
+                  <h3 className="text-white font-serif text-lg">
                     {item.title}
-                  </h4>
+                  </h3>
                 </div>
               </motion.div>
             ))}

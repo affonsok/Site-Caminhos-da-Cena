@@ -59,7 +59,7 @@ export function Integrantes() {
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
           {members.map((member, index) => (
-            <motion.div
+            <motion.article
               key={member.name}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -78,10 +78,10 @@ export function Integrantes() {
               </div>
               <div className="flex items-start justify-between">
                 <div className="text-left">
-                  <h4 className="font-serif text-sm font-bold text-[#2d1b4d] leading-tight">
+                  <h3 className="font-serif text-sm font-bold text-[#2d1b4d] leading-tight">
                     {member.name.split(' ')[0]}<br />
                     <span className="font-medium opacity-90">{member.name.split(' ').slice(1).join(' ')}</span>
-                  </h4>
+                  </h3>
                   <p className="text-[9px] uppercase tracking-widest text-[#2d1b4d]/60 mt-1">
                     {member.role}
                   </p>
@@ -96,7 +96,7 @@ export function Integrantes() {
                   </div>
                 </Link>
               </div>
-            </motion.div>
+            </motion.article>
           ))}
         </div>
       </div>

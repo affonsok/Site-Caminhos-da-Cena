@@ -48,11 +48,11 @@ export function Cena() {
             </div>
             <div className="mt-12 grid grid-cols-2 gap-8 border-t border-black/5 pt-12">
               <div>
-                <h4 className="text-3xl font-serif mb-2">15+</h4>
+                <div className="text-3xl font-serif mb-2">15+</div>
                 <p className="text-sm text-black/50 uppercase tracking-wider">Anos de História</p>
               </div>
               <div>
-                <h4 className="text-3xl font-serif mb-2">40+</h4>
+                <div className="text-3xl font-serif mb-2">40+</div>
                 <p className="text-sm text-black/50 uppercase tracking-wider">Produções Originais</p>
               </div>
             </div>

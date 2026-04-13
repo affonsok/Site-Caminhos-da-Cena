@@ -72,25 +72,25 @@ export function Header() {
           <SheetTrigger
             className="md:hidden"
             render={
-              <div className={isScrolled ? "text-black" : "text-white"}>
-                <Button variant="ghost" size="icon" className="hover:bg-transparent">
-                  <Menu className="h-6 w-6" />
-                </Button>
-              </div>
+              <Button variant="ghost" size="icon" className={cn("hover:bg-transparent", isScrolled ? "text-black" : "text-white")}>
+                <Menu className="h-6 w-6" />
+              </Button>
             }
           />
-          <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-            <nav className="flex flex-col space-y-6 mt-12">
-              {navItems.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="text-2xl font-serif font-medium hover:opacity-60 transition-opacity"
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </nav>
+          <SheetContent side="right" className="w-[85vw] sm:w-[400px] p-8">
+            <div className="flex flex-col h-full mt-12">
+              <nav className="flex flex-col space-y-6">
+                {navItems.map((item) => (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className="text-3xl font-serif font-medium hover:opacity-60 transition-opacity border-b border-neutral-100 pb-4"
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+              </nav>
+            </div>
           </SheetContent>
         </Sheet>
       </div>

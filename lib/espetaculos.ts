@@ -1,0 +1,169 @@
+export interface CastMember {
+  name: string;
+  role: string;
+  image: string;
+}
+
+export interface TechInfo {
+  label: string;
+  value: string;
+}
+
+export interface Espetaculo {
+  slug: string;
+  title: string;
+  category: string;
+  year: string;
+  status: string;
+  image: string;
+  heroImage: string;
+  synopsis: string;
+  cast: CastMember[];
+  techSheet: TechInfo[];
+  gallery: string[];
+}
+
+export const espetaculos: Espetaculo[] = [
+  {
+    slug: 'o-grito-do-silencio',
+    title: 'O Grito do Silêncio',
+    category: 'Drama Contemporâneo',
+    year: '2024',
+    status: 'Em Cartaz',
+    image: '/images/espetaculos/play1.jpg',
+    heroImage: '/images/espetaculos/play1.jpg',
+    synopsis:
+      'Uma reflexão profunda sobre as vozes silenciadas em nossa sociedade contemporânea. Através de uma narrativa não-linear que entrelaça memórias e desejos reprimidos, cinco personagens confrontam seus medos mais íntimos em um espaço cênico que se transforma a cada cena. O espetáculo explora as fronteiras entre o dito e o não-dito, revelando como o silêncio pode ser, paradoxalmente, o mais alto dos gritos. Uma obra que questiona os limites da comunicação humana e nos convida a ouvir o que nunca foi pronunciado.',
+    cast: [
+      { name: 'Maria Silva', role: 'Direção', image: '/images/integrantes/person1.jpg' },
+      { name: 'João Santos', role: 'Ator Principal', image: '/images/integrantes/person2.jpg' },
+      { name: 'Ana Costa', role: 'Atriz', image: '/images/integrantes/person3.jpg' },
+      { name: 'Pedro Lima', role: 'Ator', image: '/images/integrantes/person4.jpg' },
+      { name: 'Carla Mendes', role: 'Figurinista', image: '/images/integrantes/person5.jpg' },
+      { name: 'Lucas Oliveira', role: 'Iluminação', image: '/images/integrantes/person6.jpg' },
+    ],
+    techSheet: [
+      { label: 'Direção', value: 'Maria Silva' },
+      { label: 'Dramaturgia', value: 'Coletivo Caminhos da Cena' },
+      { label: 'Duração', value: '90 minutos' },
+      { label: 'Classificação', value: '14 anos' },
+      { label: 'Iluminação', value: 'Lucas Oliveira' },
+      { label: 'Figurino', value: 'Carla Mendes' },
+      { label: 'Sonoplastia', value: 'Ricardo Alves' },
+      { label: 'Produção', value: 'Caminhos da Cena Produções' },
+    ],
+    gallery: [
+      '/images/espetaculos/play1-1.jpg',
+      '/images/espetaculos/play1-2.jpg',
+      '/images/espetaculos/play1-3.jpg',
+    ],
+  },
+  {
+    slug: 'fragmentos-de-ontem',
+    title: 'Fragmentos de Ontem',
+    category: 'Experimental',
+    year: '2023',
+    status: 'Encerrado',
+    image: '/images/espetaculos/play2.jpg',
+    heroImage: '/images/espetaculos/play2.jpg',
+    synopsis:
+      'Fragmentos de Ontem é uma peça experimental que mergulha nas complexidades da memória humana. A partir de relatos autobiográficos do elenco, a obra constrói um mosaico de lembranças fragmentadas que se sobrepõem, contradizem e complementam. Com uma linguagem cênica que mistura teatro físico, projeções e música ao vivo, o espetáculo desafia as convenções narrativas tradicionais para criar uma experiência sensorial única. Premiado no Festival Nacional de Artes Cênicas como melhor produção experimental.',
+    cast: [
+      { name: 'Maria Silva', role: 'Direção e Dramaturgia', image: '/images/integrantes/person1.jpg' },
+      { name: 'Ana Costa', role: 'Atriz', image: '/images/integrantes/person3.jpg' },
+      { name: 'Pedro Lima', role: 'Ator', image: '/images/integrantes/person4.jpg' },
+      { name: 'Beatriz Ramos', role: 'Atriz', image: '/images/integrantes/person5.jpg' },
+      { name: 'Felipe Nunes', role: 'Cenografia', image: '/images/integrantes/person6.jpg' },
+    ],
+    techSheet: [
+      { label: 'Direção', value: 'Maria Silva' },
+      { label: 'Dramaturgia', value: 'Maria Silva' },
+      { label: 'Duração', value: '75 minutos' },
+      { label: 'Classificação', value: '16 anos' },
+      { label: 'Cenografia', value: 'Felipe Nunes' },
+      { label: 'Trilha Sonora', value: 'Duo Ressonância' },
+      { label: 'Projeções', value: 'Studio Visual Lab' },
+      { label: 'Produção', value: 'Caminhos da Cena Produções' },
+    ],
+    gallery: [
+      '/images/espetaculos/play2-1.jpg',
+      '/images/espetaculos/play2-2.jpg',
+      '/images/espetaculos/play2-3.jpg',
+    ],
+  },
+  {
+    slug: 'a-danca-das-sombras',
+    title: 'A Dança das Sombras',
+    category: 'Teatro Físico',
+    year: '2023',
+    status: 'Turnê',
+    image: '/images/espetaculos/play3.jpg',
+    heroImage: '/images/espetaculos/play3.jpg',
+    synopsis:
+      'A Dança das Sombras é uma investigação corporal sobre a dualidade humana. Através de uma coreografia meticulosamente construída, os performers exploram as tensões entre luz e escuridão, presença e ausência, movimento e imobilidade. O espetáculo utiliza técnicas de teatro de sombras combinadas com dança contemporânea para criar imagens de beleza perturbadora. Uma jornada visual e sensorial que convida o espectador a confrontar suas próprias sombras interiores.',
+    cast: [
+      { name: 'João Santos', role: 'Direção e Coreografia', image: '/images/integrantes/person2.jpg' },
+      { name: 'Ana Costa', role: 'Performer', image: '/images/integrantes/person3.jpg' },
+      { name: 'Pedro Lima', role: 'Performer', image: '/images/integrantes/person4.jpg' },
+      { name: 'Carla Mendes', role: 'Figurino', image: '/images/integrantes/person5.jpg' },
+      { name: 'Lucas Oliveira', role: 'Design de Luz', image: '/images/integrantes/person6.jpg' },
+    ],
+    techSheet: [
+      { label: 'Direção', value: 'João Santos' },
+      { label: 'Coreografia', value: 'João Santos' },
+      { label: 'Duração', value: '60 minutos' },
+      { label: 'Classificação', value: '12 anos' },
+      { label: 'Figurino', value: 'Carla Mendes' },
+      { label: 'Design de Luz', value: 'Lucas Oliveira' },
+      { label: 'Preparação Corporal', value: 'Studio Movimento' },
+      { label: 'Produção', value: 'Caminhos da Cena Produções' },
+    ],
+    gallery: [
+      '/images/espetaculos/play3-1.jpg',
+      '/images/espetaculos/play3-2.jpg',
+      '/images/espetaculos/play3-3.jpg',
+    ],
+  },
+  {
+    slug: 'vozes-da-cidade',
+    title: 'Vozes da Cidade',
+    category: 'Musical',
+    year: '2022',
+    status: 'Encerrado',
+    image: '/images/espetaculos/play4.jpg',
+    heroImage: '/images/espetaculos/play4.jpg',
+    synopsis:
+      'Vozes da Cidade é um musical vibrante que celebra a diversidade cultural e a energia pulsante das ruas brasileiras. Com um elenco numeroso e uma trilha sonora original que mistura samba, hip-hop, MPB e música eletrônica, o espetáculo conta as histórias entrecruzadas de personagens que vivem nas margens da cidade grande. Uma obra que dá voz aos invisíveis e transforma o palco em um microcosmo da vida urbana brasileira, com suas contradições, belezas e resistências.',
+    cast: [
+      { name: 'Maria Silva', role: 'Direção', image: '/images/integrantes/person1.jpg' },
+      { name: 'João Santos', role: 'Direção Musical', image: '/images/integrantes/person2.jpg' },
+      { name: 'Ana Costa', role: 'Atriz e Cantora', image: '/images/integrantes/person3.jpg' },
+      { name: 'Pedro Lima', role: 'Ator e Cantor', image: '/images/integrantes/person4.jpg' },
+      { name: 'Carla Mendes', role: 'Figurinista', image: '/images/integrantes/person5.jpg' },
+      { name: 'Lucas Oliveira', role: 'Iluminação', image: '/images/integrantes/person6.jpg' },
+    ],
+    techSheet: [
+      { label: 'Direção', value: 'Maria Silva' },
+      { label: 'Direção Musical', value: 'João Santos' },
+      { label: 'Duração', value: '120 minutos (com intervalo)' },
+      { label: 'Classificação', value: 'Livre' },
+      { label: 'Figurino', value: 'Carla Mendes' },
+      { label: 'Cenografia', value: 'Atelier Espaço Vivo' },
+      { label: 'Coreografia', value: 'Movimento Urbano Cia.' },
+      { label: 'Produção', value: 'Caminhos da Cena Produções' },
+    ],
+    gallery: [
+      '/images/espetaculos/play4-1.jpg',
+      '/images/espetaculos/play4-2.jpg',
+      '/images/espetaculos/play4-3.jpg',
+    ],
+  },
+];
+
+export function getEspetaculoBySlug(slug: string): Espetaculo | undefined {
+  return espetaculos.find((e) => e.slug === slug);
+}
+
+export function getAllSlugs(): string[] {
+  return espetaculos.map((e) => e.slug);
+}
