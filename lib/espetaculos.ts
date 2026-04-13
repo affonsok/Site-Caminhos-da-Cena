@@ -30,8 +30,8 @@ export const espetaculos: Espetaculo[] = [
     category: 'Comédia',
     year: '2024',
     status: 'Em Cartaz',
-    image: '/images/espetaculos/almasome/20260410_205048.jpg',
-    heroImage: '/images/espetaculos/almasome/20260410_205048.jpg',
+    image: '/images/espetaculos/almasome/20260410_211201.jpg',
+    heroImage: '/images/espetaculos/almasome/20260410_211201.jpg',
     synopsis:
       'Uma reflexão profunda sobre as vozes silenciadas em nossa sociedade contemporânea. Através de uma narrativa não-linear que entrelaça memórias e desejos reprimidos, cinco personagens confrontam seus medos mais íntimos em um espaço cênico que se transforma a cada cena. O espetáculo explora as fronteiras entre o dito e o não-dito, revelando como o silêncio pode ser, paradoxalmente, o mais alto dos gritos. Uma obra que questiona os limites da comunicação humana e nos convida a ouvir o que nunca foi pronunciado.',
     cast: [
@@ -53,8 +53,6 @@ export const espetaculos: Espetaculo[] = [
       { label: 'Produção', value: 'Caminhos da Cena Produções' },
     ],
     gallery: [
-      '/images/espetaculos/almasome/20260410_205048.jpg',
-      '/images/espetaculos/almasome/20260410_205213.jpg',
       '/images/espetaculos/almasome/20260410_211201.jpg',
       '/images/espetaculos/almasome/20260410_212036.jpg',
       '/images/espetaculos/almasome/20260410_212805.jpg',
