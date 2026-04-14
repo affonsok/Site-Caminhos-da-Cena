@@ -1,7 +1,8 @@
 export interface CastMember {
+  /** Nome completo — deve coincidir com um integrante em lib/integrantes.ts */
   name: string;
+  /** Papel no espetáculo (ex: 'Elenco', 'Direção') */
   role: string;
-  image: string;
 }
 
 export interface TechInfo {
@@ -36,10 +37,10 @@ export const espetaculos: Espetaculo[] = [
     synopsis:
       'Uma fábula contemporânea que nasce da cultura popular e atravessa a espiritualidade do povo, o silêncio imposto aos invisíveis e a força da transformação. Um espetáculo sobre dignidade, metamorfose e libertação onde cada corpo em cena carrega memória, resistência e esperança.',
     cast: [
-      { name: 'Giordano Zel', role: 'Elenco', image: '/images/espetaculos/almasome/20260410_211201.jpg' },
-      { name: 'Lucas Garcia', role: 'Elenco', image: '/images/espetaculos/almasome/20260410_212036.jpg' },
-      { name: 'Natali Cruz', role: 'Elenco', image: '/images/espetaculos/almasome/20260410_212805.jpg' },
-      { name: 'Pedro Paulo Mota', role: 'Elenco', image: '/images/espetaculos/almasome/20260410_213312.jpg' },
+      { name: 'Giordano Zel', role: 'Elenco' },
+      { name: 'Lucas Garcia', role: 'Elenco' },
+      { name: 'Natali Cruz', role: 'Elenco' },
+      { name: 'Pedro Paulo Mota', role: 'Elenco' },
     ],
     techSheet: [
       { label: 'Texto e Direção', value: 'Thiago Thião' },
@@ -76,11 +77,11 @@ export const espetaculos: Espetaculo[] = [
     synopsis:
       'Fragmentos de Ontem é uma peça experimental que mergulha nas complexidades da memória humana. A partir de relatos autobiográficos do elenco, a obra constrói um mosaico de lembranças fragmentadas que se sobrepõem, contradizem e complementam. Com uma linguagem cênica que mistura teatro físico, projeções e música ao vivo, o espetáculo desafia as convenções narrativas tradicionais para criar uma experiência sensorial única. Premiado no Festival Nacional de Artes Cênicas como melhor produção experimental.',
     cast: [
-      { name: 'Maria Silva', role: 'Direção e Dramaturgia', image: '/images/integrantes/person1.jpg' },
-      { name: 'Ana Costa', role: 'Atriz', image: '/images/integrantes/person3.jpg' },
-      { name: 'Pedro Lima', role: 'Ator', image: '/images/integrantes/person4.jpg' },
-      { name: 'Beatriz Ramos', role: 'Atriz', image: '/images/integrantes/person5.jpg' },
-      { name: 'Felipe Nunes', role: 'Cenografia', image: '/images/integrantes/person6.jpg' },
+      { name: 'Maria Silva', role: 'Direção e Dramaturgia' },
+      { name: 'Ana Costa', role: 'Atriz' },
+      { name: 'Pedro Lima', role: 'Ator' },
+      { name: 'Beatriz Ramos', role: 'Atriz' },
+      { name: 'Felipe Nunes', role: 'Cenografia' },
     ],
     techSheet: [
       { label: 'Direção', value: 'Maria Silva' },
@@ -109,11 +110,11 @@ export const espetaculos: Espetaculo[] = [
     synopsis:
       'A Dança das Sombras é uma investigação corporal sobre a dualidade humana. Através de uma coreografia meticulosamente construída, os performers exploram as tensões entre luz e escuridão, presença e ausência, movimento e imobilidade. O espetáculo utiliza técnicas de teatro de sombras combinadas com dança contemporânea para criar imagens de beleza perturbadora. Uma jornada visual e sensorial que convida o espectador a confrontar suas próprias sombras interiores.',
     cast: [
-      { name: 'João Santos', role: 'Direção e Coreografia', image: '/images/integrantes/person2.jpg' },
-      { name: 'Ana Costa', role: 'Performer', image: '/images/integrantes/person3.jpg' },
-      { name: 'Pedro Lima', role: 'Performer', image: '/images/integrantes/person4.jpg' },
-      { name: 'Carla Mendes', role: 'Figurino', image: '/images/integrantes/person5.jpg' },
-      { name: 'Lucas Oliveira', role: 'Design de Luz', image: '/images/integrantes/person6.jpg' },
+      { name: 'João Santos', role: 'Direção e Coreografia' },
+      { name: 'Ana Costa', role: 'Performer' },
+      { name: 'Pedro Lima', role: 'Performer' },
+      { name: 'Carla Mendes', role: 'Figurino' },
+      { name: 'Lucas Oliveira', role: 'Design de Luz' },
     ],
     techSheet: [
       { label: 'Direção', value: 'João Santos' },
@@ -142,12 +143,12 @@ export const espetaculos: Espetaculo[] = [
     synopsis:
       'Vozes da Cidade é um musical vibrante que celebra a diversidade cultural e a energia pulsante das ruas brasileiras. Com um elenco numeroso e uma trilha sonora original que mistura samba, hip-hop, MPB e música eletrônica, o espetáculo conta as histórias entrecruzadas de personagens que vivem nas margens da cidade grande. Uma obra que dá voz aos invisíveis e transforma o palco em um microcosmo da vida urbana brasileira, com suas contradições, belezas e resistências.',
     cast: [
-      { name: 'Maria Silva', role: 'Direção', image: '/images/integrantes/person1.jpg' },
-      { name: 'João Santos', role: 'Direção Musical', image: '/images/integrantes/person2.jpg' },
-      { name: 'Ana Costa', role: 'Atriz e Cantora', image: '/images/integrantes/person3.jpg' },
-      { name: 'Pedro Lima', role: 'Ator e Cantor', image: '/images/integrantes/person4.jpg' },
-      { name: 'Carla Mendes', role: 'Figurinista', image: '/images/integrantes/person5.jpg' },
-      { name: 'Lucas Oliveira', role: 'Iluminação', image: '/images/integrantes/person6.jpg' },
+      { name: 'Maria Silva', role: 'Direção' },
+      { name: 'João Santos', role: 'Direção Musical' },
+      { name: 'Ana Costa', role: 'Atriz e Cantora' },
+      { name: 'Pedro Lima', role: 'Ator e Cantor' },
+      { name: 'Carla Mendes', role: 'Figurinista' },
+      { name: 'Lucas Oliveira', role: 'Iluminação' },
     ],
     techSheet: [
       { label: 'Direção', value: 'Maria Silva' },

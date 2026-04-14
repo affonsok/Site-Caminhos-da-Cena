@@ -8,6 +8,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Badge } from '@/components/ui/badge';
 import { ArrowLeft, X, ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 import { getEspetaculoBySlug } from '@/lib/espetaculos';
+import { getIntegranteByName, INTEGRANTE_FALLBACK_IMAGE } from '@/lib/integrantes';
 import { cn } from '@/lib/utils';
 import { ShareBar } from '@/components/ShareBar';
 
@@ -148,31 +149,48 @@ export default function EspetaculoPage() {
             </div>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 md:gap-8">
-              {espetaculo.cast.map((member, index) => (
-                <motion.div
-                  key={member.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.05 }}
-                  className="text-center group"
-                >
-                  <div className="relative aspect-square rounded-2xl overflow-hidden mb-4 bg-neutral-200">
-                    <Image
-                      src={member.image}
-                      alt={member.name}
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                  </div>
-                  <h3 className="font-serif text-base font-medium leading-tight">
-                    {member.name}
-                  </h3>
-                  <p className="text-[11px] uppercase tracking-widest text-black/40 mt-1">
-                    {member.role}
-                  </p>
-                </motion.div>
-              ))}
+              {espetaculo.cast.map((member, index) => {
+                // Resolve foto e dados do integrante pelo nome
+                const integrante = getIntegranteByName(member.name);
+                const photo = integrante?.image ?? INTEGRANTE_FALLBACK_IMAGE;
+                const hasFoto = !!integrante?.image && integrante.image !== INTEGRANTE_FALLBACK_IMAGE;
+
+                return (
+                  <motion.div
+                    key={member.name}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: index * 0.05 }}
+                    className="text-center group"
+                  >
+                    <div className="relative aspect-square rounded-2xl overflow-hidden mb-4 bg-neutral-200">
+                      <Image
+                        src={photo}
+                        alt={member.name}
+                        fill
+                        className={cn(
+                          'object-cover transition-transform duration-500 group-hover:scale-105',
+                          !hasFoto && 'opacity-40'
+                        )}
+                      />
+                      {!hasFoto && (
+                        <div className="absolute inset-0 flex items-end justify-center pb-3">
+                          <span className="text-[9px] uppercase tracking-widest text-black/40 font-medium">
+                            Foto em breve
+                          </span>
+                        </div>
+                      )}
+                    </div>
+                    <h3 className="font-serif text-base font-medium leading-tight">
+                      {member.name}
+                    </h3>
+                    <p className="text-[11px] uppercase tracking-widest text-black/40 mt-1">
+                      {member.role}
+                    </p>
+                  </motion.div>
+                );
+              })}
             </div>
           </motion.div>
         </div>
