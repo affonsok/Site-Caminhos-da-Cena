@@ -20,6 +20,7 @@ export interface Espetaculo {
   synopsis: string;
   cast: CastMember[];
   techSheet: TechInfo[];
+  support?: string;
   gallery: string[];
 }
 
@@ -35,23 +36,20 @@ export const espetaculos: Espetaculo[] = [
     synopsis:
       'Uma fábula contemporânea que nasce da cultura popular e atravessa a espiritualidade do povo, o silêncio imposto aos invisíveis e a força da transformação. Um espetáculo sobre dignidade, metamorfose e libertação onde cada corpo em cena carrega memória, resistência e esperança.',
     cast: [
-      { name: 'Maria Silva', role: 'Direção', image: '/images/integrantes/person1.jpg' },
-      { name: 'João Santos', role: 'Ator Principal', image: '/images/integrantes/person2.jpg' },
-      { name: 'Ana Costa', role: 'Atriz', image: '/images/integrantes/person3.jpg' },
-      { name: 'Pedro Lima', role: 'Ator', image: '/images/integrantes/person4.jpg' },
-      { name: 'Carla Mendes', role: 'Figurinista', image: '/images/integrantes/person5.jpg' },
-      { name: 'Lucas Oliveira', role: 'Iluminação', image: '/images/integrantes/person6.jpg' },
+      { name: 'Giordano Zel', role: 'Elenco', image: '/images/espetaculos/almasome/20260410_211201.jpg' },
+      { name: 'Lucas Garcia', role: 'Elenco', image: '/images/espetaculos/almasome/20260410_212036.jpg' },
+      { name: 'Natali Cruz', role: 'Elenco', image: '/images/espetaculos/almasome/20260410_212805.jpg' },
+      { name: 'Pedro Paulo Mota', role: 'Elenco', image: '/images/espetaculos/almasome/20260410_213312.jpg' },
     ],
     techSheet: [
-      { label: 'Direção', value: 'Maria Silva' },
-      { label: 'Dramaturgia', value: 'Coletivo Caminhos da Cena' },
-      { label: 'Duração', value: '90 minutos' },
-      { label: 'Classificação', value: '14 anos' },
-      { label: 'Iluminação', value: 'Lucas Oliveira' },
-      { label: 'Figurino', value: 'Carla Mendes' },
-      { label: 'Sonoplastia', value: 'Ricardo Alves' },
-      { label: 'Produção', value: 'Caminhos da Cena Produções' },
+      { label: 'Texto e Direção', value: 'Thiago Thião' },
+      { label: 'Direção Musical', value: 'Lucas Henning' },
+      { label: 'Preparação Vocal', value: 'Ana Melo' },
+      { label: 'Mascareiro', value: 'Bruno Wozniack' },
+      { label: 'Dir. de Produção e Figurino', value: 'Hevellin Braga' },
+      { label: 'Assistente de Produção', value: 'Letícia Mendes' },
     ],
+    support: 'Associação Cultural Caminhos da Cena',
     gallery: [
       '/images/espetaculos/almasome/20260410_211201.jpg',
       '/images/espetaculos/almasome/20260410_212036.jpg',

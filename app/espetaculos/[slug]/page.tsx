@@ -273,6 +273,23 @@ export default function EspetaculoPage() {
               ))}
             </dl>
 
+            {espetaculo.support && (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.2 }}
+                className="mt-10 pt-8 border-t border-white/10 flex items-center justify-between"
+              >
+                <span className="text-white/40 text-xs uppercase tracking-widest font-medium">
+                  Apoio
+                </span>
+                <span className="font-serif text-base text-red-400/90 text-right">
+                  {espetaculo.support}
+                </span>
+              </motion.div>
+            )}
+
             <div className="mt-16 text-center">
               <Link
                 href="/#espetaculos"
