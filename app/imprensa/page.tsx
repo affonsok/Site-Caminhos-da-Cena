@@ -10,10 +10,14 @@ import { Footer } from '@/components/Footer';
 import { Noticias } from '@/components/Noticias';
 import { Clipping } from '@/components/Clipping';
 
+/**
+ * Imprensa Page - Aggregates News and Clipping.
+ */
 export default function ImprensaPage() {
   return (
     <main className="min-h-screen">
       <Header />
+      
       {/* Hero Header - Pattern matching Espetaculos */}
       <section className="relative h-[60vh] md:h-[70vh] overflow-hidden">
         <Image

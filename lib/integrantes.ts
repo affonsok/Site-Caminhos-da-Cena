@@ -73,19 +73,19 @@ export const integrantes: Integrante[] = [
   {
     name: 'Lucas Henning',
     role: 'Diretor Musical',
-    image: '/images/integrantes/lucas-henning.jpg',
+    image: INTEGRANTE_FALLBACK_IMAGE,
     instagram: 'https://instagram.com/',
   },
   {
     name: 'Ana Melo',
     role: 'Preparação Vocal',
-    image: '/images/integrantes/ana-melo.jpg',
+    image: INTEGRANTE_FALLBACK_IMAGE,
     instagram: 'https://instagram.com/',
   },
   {
     name: 'Bruno Wozniack',
     role: 'Mascareiro',
-    image: '/images/integrantes/bruno-wozniack.jpg',
+    image: INTEGRANTE_FALLBACK_IMAGE,
     instagram: 'https://instagram.com/',
   },
 ];

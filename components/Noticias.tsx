@@ -7,7 +7,15 @@ import { motion } from 'motion/react';
 import { Button } from '@/components/ui/button';
 import { ShareBar } from '@/components/ShareBar';
 
-const news = [
+interface NewsItem {
+  date: string;
+  title: string;
+  excerpt: string;
+  image: string;
+  href: string;
+}
+
+const news: NewsItem[] = [
   {
     date: '12 Abr, 2024',
     title: 'Nova oficina de interpretação abre inscrições para o próximo mês',
@@ -37,8 +45,8 @@ export function Noticias() {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between mb-16">
           <h2 className="text-4xl font-serif">Notícias & Novidades</h2>
-          <Button variant="link" className="text-black uppercase tracking-widest text-xs font-semibold">
-            Ver Todas
+          <Button variant="link" className="text-black uppercase tracking-widest text-xs font-semibold" asChild>
+            <Link href="/imprensa">Ver Todas</Link>
           </Button>
         </div>
 
@@ -62,7 +70,6 @@ export function Noticias() {
                       alt={item.title}
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
-                      referrerPolicy="no-referrer"
                     />
                   </div>
                   <span className="text-[10px] font-semibold uppercase tracking-widest text-black/40 mb-3 block">
