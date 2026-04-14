@@ -9,13 +9,13 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
 
 const navItems = [
-  { name: 'Cena', href: '#cena' },
-  { name: 'Espetáculos', href: '#espetaculos' },
-  { name: 'Integrantes', href: '#integrantes' },
-  { name: 'História', href: '#historia' },
-  { name: 'Galeria', href: '#galeria' },
+  { name: 'Cena', href: '/#cena' },
+  { name: 'Espetáculos', href: '/#espetaculos' },
+  { name: 'Integrantes', href: '/#integrantes' },
+  { name: 'História', href: '/#historia' },
+  { name: 'Galeria', href: '/#galeria' },
   { name: 'Imprensa', href: '/imprensa' },
-  { name: 'Contato', href: '#contato' },
+  { name: 'Contato', href: '/#contato' },
 ];
 
 export function Header() {
