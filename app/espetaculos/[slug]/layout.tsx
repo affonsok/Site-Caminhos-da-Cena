@@ -18,10 +18,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
   
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.caminhosdacena.com.br';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://caminhosdacena.netlify.app';
   const espetaculoUrl = `${siteUrl}/espetaculos/${slug}`;
 
-  // Make sure to use the absolute URL for the image
+  // Make sure to use the absolute URL for the image (required for WhatsApp/social crawlers)
   const imageUrl = espetaculo.heroImage.startsWith('http') 
     ? espetaculo.heroImage 
     : `${siteUrl}${espetaculo.heroImage}`;
