@@ -35,12 +35,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: espetaculo.title,
       description,
       url: espetaculoUrl,
+      siteName: 'Caminhos da Cena',
+      locale: 'pt_BR',
       images: [
         {
           url: imageUrl,
-          width: 1200,
-          height: 630,
+          width: 1920,
+          height: 1081,
           alt: espetaculo.title,
+          type: 'image/jpeg',
         },
       ],
       type: 'website',
@@ -50,6 +53,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: espetaculo.title,
       description,
       images: [imageUrl],
+    },
+    // Tags explícitas para garantir compatibilidade com crawlers (WhatsApp, Telegram, etc.)
+    other: {
+      'og:image:width': '1920',
+      'og:image:height': '1081',
+      'og:image:type': 'image/jpeg',
+      'og:image:alt': espetaculo.title,
     },
   };
 }
