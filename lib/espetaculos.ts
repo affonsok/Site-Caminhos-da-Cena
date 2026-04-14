@@ -33,7 +33,7 @@ export const espetaculos: Espetaculo[] = [
     image: '/images/espetaculos/almasome/20260410_211201.jpg',
     heroImage: '/images/espetaculos/almasome/20260410_211201.jpg',
     synopsis:
-      'Uma reflexão profunda sobre as vozes silenciadas em nossa sociedade contemporânea. Através de uma narrativa não-linear que entrelaça memórias e desejos reprimidos, cinco personagens confrontam seus medos mais íntimos em um espaço cênico que se transforma a cada cena. O espetáculo explora as fronteiras entre o dito e o não-dito, revelando como o silêncio pode ser, paradoxalmente, o mais alto dos gritos. Uma obra que questiona os limites da comunicação humana e nos convida a ouvir o que nunca foi pronunciado.',
+      'Uma fábula contemporânea que nasce da cultura popular e atravessa a espiritualidade do povo, o silêncio imposto aos invisíveis e a força da transformação. Um espetáculo sobre dignidade, metamorfose e libertação onde cada corpo em cena carrega memória, resistência e esperança.',
     cast: [
       { name: 'Maria Silva', role: 'Direção', image: '/images/integrantes/person1.jpg' },
       { name: 'João Santos', role: 'Ator Principal', image: '/images/integrantes/person2.jpg' },

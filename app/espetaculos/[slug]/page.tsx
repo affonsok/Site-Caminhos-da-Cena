@@ -9,6 +9,7 @@ import { Badge } from '@/components/ui/badge';
 import { ArrowLeft, X, ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 import { getEspetaculoBySlug } from '@/lib/espetaculos';
 import { cn } from '@/lib/utils';
+import { ShareBar } from '@/components/ShareBar';
 
 export default function EspetaculoPage() {
   const params = useParams();
@@ -125,6 +126,7 @@ export default function EspetaculoPage() {
                 {espetaculo.synopsis}
               </p>
             </div>
+            <ShareBar title={espetaculo.title} />
           </motion.div>
         </div>
       </section>
