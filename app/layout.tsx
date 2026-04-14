@@ -14,6 +14,8 @@ const cormorant = Cormorant_Garamond({
   variable: '--font-serif',
 });
 
+import { ScrollToTop } from "@/components/ScrollToTop";
+
 export const metadata: Metadata = {
   title: 'Caminhos da Cena - Grupo de Teatro',
   description: 'Site oficial do grupo de teatro Caminhos da Cena. Espetáculos, notícias, integrantes e clipping.',
@@ -21,9 +23,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="pt-BR" className={cn("font-sans antialiased", inter.variable, cormorant.variable)}>
+    <html lang="pt-BR" className={cn("font-sans antialiased scroll-smooth", inter.variable, cormorant.variable)}>
       <body suppressHydrationWarning className="bg-[#fdfcfb] text-[#1a1a1a]">
         {children}
+        <ScrollToTop />
       </body>
     </html>
   );
