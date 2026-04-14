@@ -77,12 +77,18 @@ export function Hero() {
             {slides[current].subtitle}
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button size="lg" className="rounded-full bg-white text-black hover:bg-white/90 px-8 py-6 text-lg w-full sm:w-auto">
+            <a
+              href="#espetaculos"
+              className="inline-flex items-center justify-center rounded-full bg-white text-black hover:bg-white/90 px-8 py-4 text-lg font-medium transition-all w-full sm:w-auto"
+            >
               Ver Espetáculos
-            </Button>
-            <Button size="lg" variant="outline" className="rounded-full border-white text-white hover:bg-white hover:text-black px-8 py-6 text-lg w-full sm:w-auto">
+            </a>
+            <a
+              href="#historia"
+              className="inline-flex items-center justify-center rounded-full border border-white/70 bg-transparent text-white hover:bg-white hover:text-black px-8 py-4 text-lg font-medium transition-all w-full sm:w-auto"
+            >
               Nossa História
-            </Button>
+            </a>
           </div>
         </motion.div>
       </div>

@@ -3,6 +3,7 @@
 import * as React from 'react';
 import { motion } from 'motion/react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { ShareBar } from '@/components/ShareBar';
 
 const clippings = [
   {
@@ -49,7 +50,13 @@ export function Clipping() {
                   </div>
                 </AccordionTrigger>
                 <AccordionContent className="text-lg text-black/60 font-light leading-relaxed pb-8">
-                  {item.content}
+                  <p>{item.content}</p>
+                  <ShareBar 
+                    title={item.title} 
+                    messagePrefix="Confira este clipping"
+                    className="mt-6 pt-4 border-t border-black/5"
+                    noBorder={true}
+                  />
                 </AccordionContent>
               </AccordionItem>
             ))}

@@ -12,9 +12,9 @@ const navItems = [
   { name: 'Cena', href: '#cena' },
   { name: 'Espetáculos', href: '#espetaculos' },
   { name: 'Integrantes', href: '#integrantes' },
+  { name: 'História', href: '#historia' },
   { name: 'Galeria', href: '#galeria' },
-  { name: 'Notícias', href: '#noticias' },
-  { name: 'Clipping', href: '#clipping' },
+  { name: 'Imprensa', href: '/imprensa' },
   { name: 'Contato', href: '#contato' },
 ];
 

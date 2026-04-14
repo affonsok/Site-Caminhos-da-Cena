@@ -3,9 +3,8 @@ import { Hero } from '@/components/Hero';
 import { Cena } from '@/components/Cena';
 import { Espetaculos } from '@/components/Espetaculos';
 import { Integrantes } from '@/components/Integrantes';
-import { Noticias } from '@/components/Noticias';
+import { Historia } from '@/components/Historia';
 import { Galeria } from '@/components/Galeria';
-import { Clipping } from '@/components/Clipping';
 import { Patrocinio } from '@/components/Patrocinio';
 import { InstagramTicker } from '@/components/InstagramTicker';
 import { Footer } from '@/components/Footer';
@@ -18,9 +17,8 @@ export default function Home() {
       <Cena />
       <Espetaculos />
       <Integrantes />
-      <Noticias />
+      <Historia />
       <Galeria />
-      <Clipping />
       <Patrocinio />
       <InstagramTicker />
       <Footer />

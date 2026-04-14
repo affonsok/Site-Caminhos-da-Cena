@@ -9,9 +9,11 @@ interface ShareBarProps {
   title: string;
   url?: string;
   className?: string;
+  messagePrefix?: string;
+  noBorder?: boolean;
 }
 
-export function ShareBar({ title, url, className }: ShareBarProps) {
+export function ShareBar({ title, url, className, messagePrefix = "Confira o espetáculo", noBorder = false }: ShareBarProps) {
   const [copied, setCopied] = React.useState(false);
   const [shareUrl, setShareUrl] = React.useState('');
 
@@ -31,7 +33,7 @@ export function ShareBar({ title, url, className }: ShareBarProps) {
 
   const shareWhatsApp = () => {
     const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(
-      `Confira o espetáculo "${title}": ${shareUrl}`
+      `${messagePrefix} "${title}": ${shareUrl}`
     )}`;
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
   };
@@ -39,7 +41,7 @@ export function ShareBar({ title, url, className }: ShareBarProps) {
   const shareEmail = () => {
     const mailtoUrl = `mailto:?subject=${encodeURIComponent(
       title
-    )}&body=${encodeURIComponent(`Confira este espetáculo:\n\n${shareUrl}`)}`;
+    )}&body=${encodeURIComponent(`${messagePrefix}:\n\n${shareUrl}`)}`;
     window.location.href = mailtoUrl;
   };
 
@@ -51,7 +53,7 @@ export function ShareBar({ title, url, className }: ShareBarProps) {
       try {
         await navigator.share({
           title: title,
-          text: `Confira o espetáculo "${title}"`,
+          text: `${messagePrefix} "${title}"`,
           url: shareUrl,
         });
       } catch (err) {
@@ -64,7 +66,11 @@ export function ShareBar({ title, url, className }: ShareBarProps) {
   };
 
   return (
-    <div className={cn("flex items-center gap-4 mt-8 pt-6 border-t border-black/10", className)}>
+    <div className={cn(
+      "flex items-center gap-4 mt-8 pt-6",
+      !noBorder && "border-t border-black/10",
+      className
+    )}>
       <span className="text-[11px] uppercase tracking-[0.2em] text-black/50 font-semibold flex items-center gap-2">
         <Share2 className="w-3.5 h-3.5" />
         Compartilhar
