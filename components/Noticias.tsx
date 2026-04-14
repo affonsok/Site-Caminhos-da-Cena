@@ -45,8 +45,12 @@ export function Noticias() {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between mb-16">
           <h2 className="text-4xl font-serif">Notícias & Novidades</h2>
-          <Button variant="link" className="text-black uppercase tracking-widest text-xs font-semibold" asChild>
-            <Link href="/imprensa">Ver Todas</Link>
+          <Button 
+            variant="link" 
+            className="text-black uppercase tracking-widest text-xs font-semibold"
+            render={<Link href="/imprensa" />}
+          >
+            Ver Todas
           </Button>
         </div>
 

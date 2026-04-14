@@ -22,6 +22,9 @@ export interface Integrante {
   bio?: string;
 }
 
+/** Imagem de fallback — exibida quando não há foto cadastrada */
+export const INTEGRANTE_FALLBACK_IMAGE = '/images/integrantes/placeholder.jpg';
+
 export const integrantes: Integrante[] = [
   // ── Elenco ──────────────────────────────────────────────────
   {
@@ -96,6 +99,3 @@ export function getIntegranteByName(name: string): Integrante | undefined {
     (i) => i.name.toLowerCase() === name.toLowerCase()
   );
 }
-
-/** Imagem de fallback — exibida quando não há foto cadastrada */
-export const INTEGRANTE_FALLBACK_IMAGE = '/images/integrantes/placeholder.jpg';
