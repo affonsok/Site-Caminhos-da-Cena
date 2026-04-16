@@ -97,11 +97,12 @@ export const integrantes = [
   {
     "name": "Hevellin Braga",
     "category": "Direção & Produção",
-    "image": "/images/integrantes/hevellin-braga.jpg",
-    "instagram": "https://instagram.com/",
+    "image": "/images/uploads/20260416404431.jpeg",
+    "instagram": "https://www.instagram.com/heve_producoes/",
     "roles": [
       "Diretora de Produção & Figurino"
-    ]
+    ],
+    "bio": "Produções artísticas"
   },
   {
     "name": "Letícia Mendes",
@@ -402,3 +403,33 @@ export const patrocinadores = [
     "logo": "/images/patrocinadores/sponsor4.jpg"
   }
 ];
+export const instagram = {
+  "username": "grupo.passos",
+  "profileUrl": "https://www.instagram.com/grupo.passos/",
+  "posts": [
+    {
+      "image": "/images/ig-placeholder.jpg",
+      "link": "https://www.instagram.com/grupo.passos/"
+    },
+    {
+      "image": "/images/ig-placeholder.jpg",
+      "link": "https://www.instagram.com/grupo.passos/"
+    },
+    {
+      "image": "/images/ig-placeholder.jpg",
+      "link": "https://www.instagram.com/grupo.passos/"
+    },
+    {
+      "image": "/images/ig-placeholder.jpg",
+      "link": "https://www.instagram.com/grupo.passos/"
+    },
+    {
+      "image": "/images/ig-placeholder.jpg",
+      "link": "https://www.instagram.com/grupo.passos/"
+    },
+    {
+      "image": "/images/ig-placeholder.jpg",
+      "link": "https://www.instagram.com/grupo.passos/"
+    }
+  ]
+};

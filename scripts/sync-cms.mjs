@@ -33,6 +33,10 @@ const espetaculos = getFilesData(contentDirs.espetaculos).sort((a, b) => (b.year
 const galeria = getFilesData(contentDirs.galeria).sort((a, b) => (b.year || "").localeCompare(a.year || ""));
 const patrocinadores = getFilesData(contentDirs.patrocinadores).sort((a, b) => (a.name || "").localeCompare(b.name || ""));
 
+// Configurações
+const instagramPath = path.join(process.cwd(), 'content/settings/instagram.json');
+const instagram = fs.existsSync(instagramPath) ? JSON.parse(fs.readFileSync(instagramPath, 'utf8')) : {};
+
 const output = `
 // Este arquivo é gerado automaticamente. Não edite manualmente.
 export const news = ${JSON.stringify(news, null, 2)};
@@ -41,6 +45,7 @@ export const integrantes = ${JSON.stringify(integrantes, null, 2)};
 export const espetaculos = ${JSON.stringify(espetaculos, null, 2)};
 export const galeria = ${JSON.stringify(galeria, null, 2)};
 export const patrocinadores = ${JSON.stringify(patrocinadores, null, 2)};
+export const instagram = ${JSON.stringify(instagram, null, 2)};
 `;
 
 fs.writeFileSync(path.join(process.cwd(), 'lib/data-index.ts'), output);

@@ -7,8 +7,34 @@ media_folder: "public/images/uploads"
 public_folder: "/images/uploads"
 
 collections:
+  - name: "configuracoes"
+    label: "Configurações do Site"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: "instagram"
+        label: "Instagram Ticker"
+        file: "content/settings/instagram.json"
+        fields:
+          - { label: "Username do Instagram", name: "username", widget: "string", default: "grupo.passos" }
+          - { label: "Link do Perfil", name: "profileUrl", widget: "string", default: "https://www.instagram.com/grupo.passos/" }
+          - {
+              label: "Fotos Recentes (Ticker)",
+              name: "posts",
+              widget: "list",
+              allow_add: true,
+              max: 20,
+              fields: [
+                { label: "Imagem", name: "image", widget: "image" },
+                { label: "Legenda/Conteúdo do Post", name: "caption", widget: "text", required: false },
+                { label: "Link do Post Original", name: "link", widget: "string", required: false }
+              ]
+            }
+
   - name: "noticias"
-    label: "Notícias"
+...
+
     folder: "content/noticias"
     create: true
     slug: "{{slug}}"
