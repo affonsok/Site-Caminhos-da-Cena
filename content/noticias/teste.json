@@ -1,0 +1,10 @@
+{
+  "id": "news-{{timestamp}}",
+  "title": "teste",
+  "date": "16/04/2026",
+  "excerpt": "testeeee",
+  "content": "testeeeetesteeeetesteeee\n\ntesteeee\n\ntesteeeetesteeeetesteeee\n\n\n\ntesteeee\n\ntesteeee\n\ntesteeee",
+  "image": "/images/uploads/20251023_204851.jpg",
+  "gallery": [],
+  "slug": "teste"
+}
