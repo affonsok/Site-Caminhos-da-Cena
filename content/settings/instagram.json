@@ -2,11 +2,10 @@
   "username": "grupo.passos",
   "profileUrl": "https://www.instagram.com/grupo.passos/",
   "posts": [
-    { "image": "/images/ig-placeholder.jpg", "link": "https://www.instagram.com/grupo.passos/" },
-    { "image": "/images/ig-placeholder.jpg", "link": "https://www.instagram.com/grupo.passos/" },
-    { "image": "/images/ig-placeholder.jpg", "link": "https://www.instagram.com/grupo.passos/" },
-    { "image": "/images/ig-placeholder.jpg", "link": "https://www.instagram.com/grupo.passos/" },
-    { "image": "/images/ig-placeholder.jpg", "link": "https://www.instagram.com/grupo.passos/" },
-    { "image": "/images/ig-placeholder.jpg", "link": "https://www.instagram.com/grupo.passos/" }
+    {
+      "image": "https://www.instagram.com/p/DXFBtfkFadX/?img_index=1",
+      "link": "https://www.instagram.com/p/DXFBtfkFadX/?img_index=1",
+      "caption": "Cada espetáculo apresentado movimenta em mim muitas questões e é sempre um fechamento de ciclos simbólico. Na segunda temporada de \"Chão desce, alma sobe\" não foi diferente. Atravessar processos que as cenas provocam internamente é uma dor e uma delícia que o teatro oferece e sou muito feliz por vivenciar isso.\nAgradeço a cada um que esteve lá com a gente, vivendo de perto - literalmente, rs - cada faceta que emprestamos aos personagens nessa segunda temporada; à @agrupacultura por nos receber tão bem; ao @grupo.passos e a @caminhosdacena da cena pelo apoio de sempre. Viva o festival de Curitiba, viva o Fringe! Evoé 🤎✨️ 🎭\n"
+    }
   ]
 }
