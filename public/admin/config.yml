@@ -2,6 +2,7 @@ backend:
   name: git-gateway
   branch: main
 
+locale: pt
 media_folder: "public/images/uploads"
 public_folder: "/images/uploads"
 
@@ -13,6 +14,7 @@ collections:
     slug: "{{slug}}"
     extension: "json"
     format: "json"
+    summary: "{{title}} ({{date}})"
     fields:
       - { label: "ID", name: "id", widget: "hidden", default: "news-{{timestamp}}" }
       - { label: "Slug", name: "slug", widget: "string" }
@@ -37,6 +39,7 @@ collections:
     slug: "{{title}}"
     extension: "json"
     format: "json"
+    summary: "{{title}} ({{year}})"
     fields:
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Ano", name: "year", widget: "string", hint: "Ex: 2024" }
@@ -49,6 +52,7 @@ collections:
     slug: "{{name}}"
     extension: "json"
     format: "json"
+    summary: "{{name}}"
     fields:
       - { label: "Nome", name: "name", widget: "string" }
       - { label: "Logotipo", name: "logo", widget: "image" }
@@ -60,6 +64,7 @@ collections:
     slug: "{{slug}}"
     extension: "json"
     format: "json"
+    summary: "{{title}} ({{year}})"
     fields:
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Slug", name: "slug", widget: "string" }
@@ -118,6 +123,7 @@ collections:
     slug: "{{name}}"
     extension: "json"
     format: "json"
+    summary: "{{name}} ({{category}})"
     fields:
       - { label: "Nome Completo", name: "name", widget: "string" }
       - { 
@@ -145,6 +151,7 @@ collections:
     slug: "{{slug}}"
     extension: "json"
     format: "json"
+    summary: "{{title}} ({{source}})"
     fields:
       - { label: "ID", name: "id", widget: "hidden", default: "clipping-{{timestamp}}" }
       - { label: "Slug", name: "slug", widget: "string" }
