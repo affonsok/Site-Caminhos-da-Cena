@@ -33,17 +33,27 @@ collections:
         }
 
   - name: "galeria"
-    label: "Galeria de Fotos"
+    label: "Galeria de Fotos (Álbuns)"
     folder: "content/galeria"
     create: true
     slug: "{{title}}"
     extension: "json"
     format: "json"
-    summary: "{{title}} ({{year}})"
+    summary: "{{title}} ({{year}}) - {{photos.length}} fotos"
     fields:
-      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Título do Álbum", name: "title", widget: "string" }
       - { label: "Ano", name: "year", widget: "string", hint: "Ex: 2024" }
-      - { label: "Imagem", name: "image", widget: "image" }
+      - { label: "Imagem de Capa", name: "image", widget: "image", hint: "Imagem que aparecerá na listagem principal" }
+      - {
+          label: "Fotos do Álbum",
+          name: "photos",
+          widget: "list",
+          summary: "{{fields.caption}}",
+          fields: [
+            { label: "Foto", name: "image", widget: "image" },
+            { label: "Legenda (Opcional)", name: "caption", widget: "string", required: false }
+          ]
+        }
 
   - name: "patrocinadores"
     label: "Patrocinadores e Apoio"
@@ -130,8 +140,7 @@ collections:
           label: "Funções Padrão", 
           name: "roles", 
           widget: "list", 
-          summary: "{{fields.role}}",
-          field: { label: "Função", name: "role", widget: "string", hint: "Ex: Ator, Diretor, etc." }
+          field: { label: "Função", widget: "string", hint: "Ex: Ator, Diretor, etc." }
         }
       - { 
           label: "Categoria", 

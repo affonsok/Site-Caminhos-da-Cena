@@ -10,15 +10,34 @@ import { galeria as galleryItems } from '@/lib/data-index';
 export function Galeria() {
   const [filter, setFilter] = React.useState('Todos');
 
-  // Gerar lista de anos únicos presentes na galeria
-  const years = React.useMemo(() => {
-    const uniqueYears = Array.from(new Set(galleryItems.map(item => item.year))).sort((a, b) => b.localeCompare(a));
-    return ['Todos', ...uniqueYears];
+  // Achatar álbuns em uma lista única de fotos para exibição na grade
+  const allPhotos = React.useMemo(() => {
+    return galleryItems.flatMap(album => {
+      // Se tiver array de fotos, usa elas, se não usa a imagem principal (legado)
+      if (album.photos && album.photos.length > 0) {
+        return album.photos.map(p => ({
+          image: p.image,
+          title: p.caption || album.title,
+          year: album.year
+        }));
+      }
+      return [{
+        image: album.image,
+        title: album.title,
+        year: album.year
+      }];
+    });
   }, []);
 
+  // Gerar lista de anos únicos presentes na galeria
+  const years = React.useMemo(() => {
+    const uniqueYears = Array.from(new Set(allPhotos.map(item => item.year))).sort((a, b) => b.localeCompare(a));
+    return ['Todos', ...uniqueYears];
+  }, [allPhotos]);
+
   const filteredItems = filter === 'Todos' 
-    ? galleryItems 
-    : galleryItems.filter(item => item.year === filter);
+    ? allPhotos 
+    : allPhotos.filter(item => item.year === filter);
 
   return (
     <section id="galeria" className="py-24 bg-white">

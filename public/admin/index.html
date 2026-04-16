@@ -12,10 +12,19 @@
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
   
   <script>
-    // Configuração de Tradução para Português
-    window.repoFiles = window.repoFiles || {};
-    
     // Custom Slug Widget
+    const createClass = window.createClass || function(spec) {
+      const constructor = spec.displayName || 'Component';
+      const Component = function(props) {
+        this.props = props;
+      };
+      Component.prototype = Object.assign(Object.create(window.React.Component.prototype), spec);
+      Component.prototype.constructor = Component;
+      return Component;
+    };
+
+    const h = window.h || window.React.createElement;
+
     CMS.registerWidget('slug_auto', createClass({
       slugify: function(text) {
         if (!text) return '';
@@ -36,7 +45,6 @@
       },
       componentDidUpdate: function(prevProps) {
         const { value, entry, onChange } = this.props;
-        // Se o valor estiver vazio, tenta gerar a partir do title ou name
         if (!value) {
           const title = entry.getIn(['data', 'title']) || entry.getIn(['data', 'name']);
           if (title) {
