@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "sync-cms": "node scripts/sync-cms.mjs",
+    "normalize-filenames": "node scripts/normalize-filenames.mjs",
     "optimize-images": "node scripts/optimize-images.mjs",
-    "predev": "npm run sync-cms",
+    "predev": "npm run normalize-filenames && npm run sync-cms",
     "dev": "next dev",
-    "prebuild": "npm run sync-cms && npm run optimize-images",
+    "prebuild": "npm run normalize-filenames && npm run sync-cms && npm run optimize-images",
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",

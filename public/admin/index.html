@@ -6,12 +6,74 @@
   <meta name="robots" content="noindex" />
   <title>Admin - Caminhos da Cena</title>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <style>
+    /* Estilos para o Guia de Instruções */
+    #cms-guide {
+      background: #f1f5f9;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      margin: 15px;
+      padding: 15px;
+      font-family: sans-serif;
+      font-size: 13px;
+      line-height: 1.5;
+      color: #334155;
+    }
+    #cms-guide h3 {
+      margin-top: 0;
+      color: #0f172a;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    #cms-guide ul {
+      padding-left: 18px;
+      margin-bottom: 0;
+    }
+    #cms-guide li {
+      margin-bottom: 8px;
+    }
+    #cms-guide code {
+      background: #e2e8f0;
+      padding: 2px 4px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+    /* Ajuste para mobile */
+    @media (max-width: 768px) {
+      #cms-guide { margin: 10px; padding: 10px; font-size: 12px; }
+    }
+  </style>
 </head>
 <body>
-  <!-- Include the script that builds the page and powers Decap CMS -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
   
   <script>
+    // Injeção do Guia na Barra Lateral
+    function injectGuide() {
+      const sidebar = document.querySelector('aside, [class*="Sidebar"]');
+      if (sidebar && !document.getElementById('cms-guide')) {
+        const guide = document.createElement('div');
+        guide.id = 'cms-guide';
+        guide.innerHTML = `
+          <h3>🚀 Guia Rápido de Edição</h3>
+          <ul>
+            <li><b>1. Mídia Primeiro:</b> Se for usar uma foto nova, suba ela na aba <b>Mídia</b> antes de criar o texto. Isso garante que o link funcione de primeira.</li>
+            <li><b>2. Fotos do WhatsApp:</b> Pode subir com o nome bagunçado! Nosso sistema limpa o nome automaticamente (deixa só os números) durante a publicação.</li>
+            <li><b>3. Ordem:</b> Edite os <b>Integrantes</b> antes dos <b>Espetáculos</b>, pois as peças buscam os nomes da nossa lista de membros.</li>
+            <li><b>4. Publique e Aguarde:</b> Após clicar em <b>Publicar</b>, o site leva cerca de 2 minutos para atualizar. É o tempo do robô otimizar as imagens e gerar as páginas.</li>
+            <li><b>5. Vínculos:</b> Se mudar o nome de um integrante, lembre-se de atualizar as peças onde ele aparece para manter o vínculo correto.</li>
+          </ul>
+        `;
+        sidebar.prepend(guide);
+      }
+    }
+
+    // Observa mudanças no DOM para injetar o guia assim que o CMS carregar
+    const observer = new MutationObserver(injectGuide);
+    observer.observe(document.body, { childList: true, subtree: true });
+
     // Custom Slug Widget
     const createClass = window.createClass || function(spec) {
       const constructor = spec.displayName || 'Component';
