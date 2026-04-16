@@ -33,7 +33,7 @@ collections:
             }
 
   - name: "noticias"
-...
+    label: "Notícias"
 
     folder: "content/noticias"
     create: true
