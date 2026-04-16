@@ -2,11 +2,15 @@
   "username": "grupo.passos",
   "profileUrl": "https://www.instagram.com/grupo.passos/",
   "posts": [
-    { "image": "/images/ig-placeholder.jpg", "link": "https://www.instagram.com/grupo.passos/" },
-    { "image": "/images/ig-placeholder.jpg", "link": "https://www.instagram.com/grupo.passos/" },
-    { "image": "/images/ig-placeholder.jpg", "link": "https://www.instagram.com/grupo.passos/" },
-    { "image": "/images/ig-placeholder.jpg", "link": "https://www.instagram.com/grupo.passos/" },
-    { "image": "/images/ig-placeholder.jpg", "link": "https://www.instagram.com/grupo.passos/" },
-    { "image": "/images/ig-placeholder.jpg", "link": "https://www.instagram.com/grupo.passos/" }
+    {
+      "image": "https://www.instagram.com/p/DXFBtfkFadX/?img_index=1",
+      "link": "https://www.instagram.com/p/DXFBtfkFadX/?img_index=1",
+      "caption": "Cada espetáculo apresentado movimenta em mim muitas questões e é sempre um fechamento de ciclos simbólico. Na segunda temporada de \"Chão desce, alma sobe\" não foi diferente. Atravessar processos que as cenas provocam internamente é uma dor e uma delícia que o teatro oferece e sou muito feliz por vivenciar isso.\nAgradeço a cada um que esteve lá com a gente, vivendo de perto - literalmente, rs - cada faceta que emprestamos aos personagens nessa segunda temporada; à @agrupacultura por nos receber tão bem; ao @grupo.passos e a @caminhosdacena da cena pelo apoio de sempre. Viva o festival de Curitiba, viva o Fringe! Evoé 🤎✨️ 🎭\n"
+    },
+    {
+      "link": "https://www.instagram.com/p/DXDKz4wEZFL/?img_index=1",
+      "caption": "Mais uma temporada de “Chão Desce Alma Sobe” chega ao fim… mas não é uma despedida, e sim um até breve. ✨\n\nE com muita alegria podemos dizer que que alegria foi um sucesso de público, com todos os ingressos esgotados em todas as sessões!!!!!!\nMuito obrigada a todos que tiraram um tempinho do seu tempo para nos assistir. A presença de vocês foi algo simplesmente espetacular é por vocês que a cena pulsa, respira e se transforma. 🧡\n\nNosso espetáculo fez parte da programação do @festivaldecuritiba, integrando o circuito independente @mostrafringe.\n\nE nosso agradecimento especial a essa equipe incrível, vocês são gigantes!\nElenco: @giordanozel, @justapassager, @natalicruzgo e @pedropaulomotaz.\nTexto e Direção: @thiagothiao\nIluminação: @brubschmi.dt\nDireção Musical: @lhbriz\nPreparação Vocal: @oi.anamelo\nMascareiro: @brunowozniack\nDireção de Produção e Figurino: @heve_producoes\nAssistente de Produção: @__le_mendes\nProdução e Social Mídia: @polyeta e @mellkep\n\nApoio: Grupo Passos, Associação Cultural Caminhos da Cena, @padariaamerica, @lojadrumshop e @gardensonmusic\n",
+      "image": "/images/uploads/whatsapp-image-2026-04-16-at-4.59.16-pm.jpeg"
+    }
   ]
 }
