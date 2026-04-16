@@ -9,6 +9,8 @@ import { integrantes, INTEGRANTE_FALLBACK_IMAGE } from '@/lib/integrantes';
 import { cn } from '@/lib/utils';
 
 export function Integrantes() {
+  const [openBio, setOpenBio] = React.useState<string | null>(null);
+
   // Agrupar integrantes por categoria
   const sections = [
     { title: 'Elenco', items: integrantes.filter(i => i.category === 'Elenco') },
@@ -38,6 +40,7 @@ export function Integrantes() {
               {section.items.map((member, index) => {
                 const hasFoto = !!member.image && member.image !== INTEGRANTE_FALLBACK_IMAGE;
                 const photo = hasFoto ? member.image : INTEGRANTE_FALLBACK_IMAGE;
+                const isOpen = openBio === member.name;
 
                 return (
                   <motion.article
@@ -48,7 +51,10 @@ export function Integrantes() {
                     transition={{ duration: 0.5, delay: index * 0.05 }}
                     className="group"
                   >
-                    <div className="relative aspect-[4/5] overflow-hidden rounded-lg mb-4 grayscale group-hover:grayscale-0 transition-all duration-500">
+                    <div 
+                      className="relative aspect-[4/5] overflow-hidden rounded-lg mb-4 grayscale group-hover:grayscale-0 transition-all duration-500 cursor-pointer"
+                      onClick={() => setOpenBio(isOpen ? null : member.name)}
+                    >
                       <Image
                         src={photo}
                         alt={member.name}
@@ -58,6 +64,23 @@ export function Integrantes() {
                           !hasFoto && 'opacity-30'
                         )}
                       />
+                      
+                      {/* Overlay de Bio no Hover/Click (Mobile Friendly) */}
+                      <div className={cn(
+                        "absolute inset-0 bg-[#EDEDED]/95 transition-opacity duration-300 flex flex-col items-center justify-center p-6 text-center z-10",
+                        isOpen ? "opacity-100" : "opacity-0 md:group-hover:opacity-100"
+                      )}>
+                        <p className="text-black text-[11px] leading-relaxed font-medium">
+                          {member.bio || "Integrante do coletivo Caminhos da Cena."}
+                        </p>
+                        {/* Indicador de fechar apenas no mobile quando aberto */}
+                        {isOpen && (
+                          <span className="mt-4 text-[9px] uppercase tracking-widest text-black/40 md:hidden">
+                            Toque para fechar
+                          </span>
+                        )}
+                      </div>
+
                       {!hasFoto && (
                         <div className="absolute inset-0 flex items-end justify-center pb-3">
                           <span className="text-[9px] uppercase tracking-widest text-black/40 font-medium">
