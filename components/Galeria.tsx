@@ -7,12 +7,24 @@ import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { galeria as galleryItems } from '@/lib/data-index';
 
+interface GalleryPhoto {
+  image: string;
+  caption?: string;
+}
+
+interface Album {
+  title: string;
+  year: string;
+  image: string;
+  photos?: GalleryPhoto[];
+}
+
 export function Galeria() {
   const [filter, setFilter] = React.useState('Todos');
 
   // Achatar álbuns em uma lista única de fotos para exibição na grade
   const allPhotos = React.useMemo(() => {
-    return galleryItems.flatMap(album => {
+    return (galleryItems as Album[]).flatMap(album => {
       // Se tiver array de fotos, usa elas, se não usa a imagem principal (legado)
       if (album.photos && album.photos.length > 0) {
         return album.photos.map(p => ({

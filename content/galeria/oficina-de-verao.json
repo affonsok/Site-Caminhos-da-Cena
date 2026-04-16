@@ -1,1 +1,8 @@
-{ "title": "Oficina de Verão", "year": "2023", "image": "/images/galeria/gal4.jpg" }
+{
+    "title":  "Oficina de Verão",
+    "year":  "2023",
+    "image":  "/images/galeria/gal4.jpg",
+    "photos":  [
+
+               ]
+}

@@ -334,42 +334,50 @@ export const galeria = [
   {
     "title": "Bastidores: O Grito",
     "year": "2024",
-    "image": "/images/galeria/gal1.jpg"
+    "image": "/images/galeria/gal1.jpg",
+    "photos": []
   },
   {
     "title": "Ensaio Aberto",
     "year": "2024",
-    "image": "/images/galeria/gal2.jpg"
+    "image": "/images/galeria/gal2.jpg",
+    "photos": []
   },
   {
     "title": "A Dança - Turnê",
     "year": "2023",
-    "image": "/images/galeria/gal5.jpg"
+    "image": "/images/galeria/gal5.jpg",
+    "photos": []
   },
   {
     "title": "Fragmentos - Estreia",
     "year": "2023",
-    "image": "/images/galeria/gal3.jpg"
+    "image": "/images/galeria/gal3.jpg",
+    "photos": []
   },
   {
     "title": "Oficina de Verão",
     "year": "2023",
-    "image": "/images/galeria/gal4.jpg"
+    "image": "/images/galeria/gal4.jpg",
+    "photos": []
   },
   {
     "title": "Vozes da Cidade",
     "year": "2022",
-    "image": "/images/galeria/gal6.jpg"
+    "image": "/images/galeria/gal6.jpg",
+    "photos": []
   },
   {
     "title": "Workshop Corporal",
     "year": "2022",
-    "image": "/images/galeria/gal7.jpg"
+    "image": "/images/galeria/gal7.jpg",
+    "photos": []
   },
   {
     "title": "Retomada Pós-Pandemia",
     "year": "2021",
-    "image": "/images/galeria/gal8.jpg"
+    "image": "/images/galeria/gal8.jpg",
+    "photos": []
   }
 ];
 export const patrocinadores = [
