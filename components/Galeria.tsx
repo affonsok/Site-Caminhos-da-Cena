@@ -5,22 +5,16 @@ import Image from 'next/image';
 import { motion, AnimatePresence } from 'motion/react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-
-const galleryItems = [
-  { id: 1, year: '2024', title: 'Bastidores: O Grito', image: '/images/galeria/gal1.jpg' },
-  { id: 2, year: '2024', title: 'Ensaio Aberto', image: '/images/galeria/gal2.jpg' },
-  { id: 3, year: '2023', title: 'Fragmentos - Estreia', image: '/images/galeria/gal3.jpg' },
-  { id: 4, year: '2023', title: 'Oficina de Verão', image: '/images/galeria/gal4.jpg' },
-  { id: 5, year: '2023', title: 'A Dança - Turnê', image: '/images/galeria/gal5.jpg' },
-  { id: 6, year: '2022', title: 'Vozes da Cidade', image: '/images/galeria/gal6.jpg' },
-  { id: 7, year: '2022', title: 'Workshop Corporal', image: '/images/galeria/gal7.jpg' },
-  { id: 8, year: '2021', title: 'Retomada Pós-Pandemia', image: '/images/galeria/gal8.jpg' },
-];
-
-const years = ['Todos', '2024', '2023', '2022', '2021'];
+import { galeria as galleryItems } from '@/lib/data-index';
 
 export function Galeria() {
   const [filter, setFilter] = React.useState('Todos');
+
+  // Gerar lista de anos únicos presentes na galeria
+  const years = React.useMemo(() => {
+    const uniqueYears = Array.from(new Set(galleryItems.map(item => item.year))).sort((a, b) => b.localeCompare(a));
+    return ['Todos', ...uniqueYears];
+  }, []);
 
   const filteredItems = filter === 'Todos' 
     ? galleryItems 
@@ -59,9 +53,9 @@ export function Galeria() {
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"
         >
           <AnimatePresence mode="popLayout">
-            {filteredItems.map((item) => (
+            {filteredItems.map((item, idx) => (
               <motion.div
-                key={item.id}
+                key={item.title + idx}
                 layout
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}

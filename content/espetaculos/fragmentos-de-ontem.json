@@ -1,0 +1,32 @@
+﻿{
+  "slug": "fragmentos-de-ontem",
+  "title": "Fragmentos de Ontem",
+  "category": "Experimental",
+  "year": "2023",
+  "status": "Encerrado",
+  "image": "/images/espetaculos/play2.jpg",
+  "heroImage": "/images/espetaculos/play2.jpg",
+  "synopsis": "Fragmentos de Ontem é uma peça experimental que mergulha nas complexidades da memória humana. A partir de relatos autobiográficos do elenco, a obra constrói um mosaico de lembranças fragmentadas que se sobrepõem, contradizem e complementam. Com uma linguagem cênica que mistura teatro físico, projeções e música ao vivo, o espetáculo desafia as convenções narrativas tradicionais para criar uma experiência sensorial única. Premiado no Festival Nacional de Artes Cênicas como melhor produção experimental.",
+  "cast": [
+    { "name": "Maria Silva", "role": "Direção e Dramaturgia" },
+    { "name": "Ana Costa", "role": "Atriz" },
+    { "name": "Pedro Lima", "role": "Ator" },
+    { "name": "Beatriz Ramos", "role": "Atriz" },
+    { "name": "Felipe Nunes", "role": "Cenografia" }
+  ],
+  "techSheet": [
+    { "label": "Direção", "value": "Maria Silva" },
+    { "label": "Dramaturgia", "value": "Maria Silva" },
+    { "label": "Duração", "value": "75 minutos" },
+    { "label": "Classificação", "value": "16 anos" },
+    { "label": "Cenografia", "value": "Felipe Nunes" },
+    { "label": "Trilha Sonora", "value": "Duo Ressonância" },
+    { "label": "Projeções", "value": "Studio Visual Lab" },
+    { "label": "Produção", "value": "Caminhos da Cena Produções" }
+  ],
+  "gallery": [
+    { "image": "/images/espetaculos/play2-1.jpg" },
+    { "image": "/images/espetaculos/play2-2.jpg" },
+    { "image": "/images/espetaculos/play2-3.jpg" }
+  ]
+}

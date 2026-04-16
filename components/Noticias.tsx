@@ -6,38 +6,7 @@ import Link from 'next/link';
 import { motion } from 'motion/react';
 import { Button } from '@/components/ui/button';
 import { ShareBar } from '@/components/ShareBar';
-
-interface NewsItem {
-  date: string;
-  title: string;
-  excerpt: string;
-  image: string;
-  href: string;
-}
-
-const news: NewsItem[] = [
-  {
-    date: '12 Abr, 2024',
-    title: 'Nova oficina de interpretação abre inscrições para o próximo mês',
-    excerpt: 'O grupo Caminhos da Cena abre as portas para novos talentos com uma oficina intensiva focada em teatro físico.',
-    image: '/images/noticias/news1.jpg',
-    href: '#',
-  },
-  {
-    date: '05 Abr, 2024',
-    title: 'Caminhos da Cena recebe prêmio de melhor produção experimental',
-    excerpt: 'Nosso último espetáculo "Fragmentos de Ontem" foi laureado no festival nacional de artes cênicas.',
-    image: '/images/noticias/news2.jpg',
-    href: '#',
-  },
-  {
-    date: '28 Mar, 2024',
-    title: 'Turnê europeia confirmada para o segundo semestre',
-    excerpt: 'Levaremos a cultura brasileira para os palcos de Portugal, Espanha e França em uma jornada de 3 meses.',
-    image: '/images/noticias/news3.jpg',
-    href: '#',
-  },
-];
+import { news } from '@/lib/noticias';
 
 export function Noticias() {
   return (
@@ -67,7 +36,7 @@ export function Noticias() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="group block"
               >
-                <Link href={item.href} className="block">
+                <Link href={`/imprensa/noticias/${item.slug}`} className="block">
                   <div className="relative aspect-video overflow-hidden rounded-xl mb-6">
                     <Image
                       src={item.image}

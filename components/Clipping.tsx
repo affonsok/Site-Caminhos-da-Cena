@@ -4,27 +4,9 @@ import * as React from 'react';
 import { motion } from 'motion/react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { ShareBar } from '@/components/ShareBar';
-
-const clippings = [
-  {
-    source: 'Jornal de Artes',
-    title: '"Uma explosão de criatividade e técnica no palco"',
-    date: 'Março 2024',
-    content: 'O grupo Caminhos da Cena demonstra uma maturidade artística rara, equilibrando perfeitamente a experimentação visual com uma dramaturgia sólida e emocionante.',
-  },
-  {
-    source: 'Revista Cultura Viva',
-    title: '"O teatro que precisamos ver hoje"',
-    date: 'Janeiro 2024',
-    content: 'Em um cenário saturado, o coletivo traz um frescor necessário, resgatando a essência do teatro de grupo com uma estética impecável.',
-  },
-  {
-    source: 'Crítica em Cena',
-    title: '"Helena Soares assina sua obra mais ambiciosa"',
-    date: 'Dezembro 2023',
-    content: 'A direção de Soares em "Fragmentos de Ontem" é um marco para a companhia, elevando o patamar das produções independentes no país.',
-  },
-];
+import { clippings } from '@/lib/clipping';
+import { ExternalLink, Plus } from 'lucide-react';
+import Link from 'next/link';
 
 export function Clipping() {
   return (
@@ -40,7 +22,7 @@ export function Clipping() {
 
           <Accordion className="w-full">
             {clippings.map((item, index) => (
-              <AccordionItem key={index} value={`item-${index}`} className="border-black/5 py-4">
+              <AccordionItem key={item.id} value={`item-${index}`} className="border-black/5 py-4">
                 <AccordionTrigger className="hover:no-underline py-6">
                   <div className="text-left">
                     <span className="text-[10px] uppercase tracking-widest text-black/40 block mb-2">
@@ -50,13 +32,38 @@ export function Clipping() {
                   </div>
                 </AccordionTrigger>
                 <AccordionContent className="text-lg text-black/60 font-light leading-relaxed pb-8">
-                  <p>{item.content}</p>
-                  <ShareBar 
-                    title={item.title} 
-                    messagePrefix="Confira este clipping"
-                    className="mt-6 pt-4 border-t border-black/5"
-                    noBorder={true}
-                  />
+                  <p>{item.summary}</p>
+                  
+                  <div className="mt-8 flex flex-col sm:flex-row sm:items-center justify-between gap-6 pt-6 border-t border-black/5">
+                    <div className="flex flex-wrap items-center gap-6">
+                      <Link 
+                        href={`/imprensa/clipping/${item.slug}`}
+                        className="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-bold text-black border-b border-black pb-1 hover:opacity-50 transition-opacity"
+                      >
+                        <Plus className="w-3 h-3" />
+                        Ler crítica completa
+                      </Link>
+
+                      {item.href && item.href !== '#' && (
+                        <a 
+                          href={item.href} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-black/40 hover:text-black transition-colors"
+                        >
+                          <ExternalLink className="w-3 h-3" />
+                          Fonte Original
+                        </a>
+                      )}
+                    </div>
+                    
+                    <ShareBar 
+                      title={item.title} 
+                      messagePrefix="Confira este clipping"
+                      noBorder={true}
+                      className="p-0"
+                    />
+                  </div>
                 </AccordionContent>
               </AccordionItem>
             ))}

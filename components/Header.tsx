@@ -3,6 +3,7 @@
 import * as React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
@@ -20,6 +21,8 @@ const navItems = [
 
 export function Header() {
   const [isScrolled, setIsScrolled] = React.useState(false);
+  const pathname = usePathname();
+  const isHomePage = pathname === '/';
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -29,11 +32,14 @@ export function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // O header deve ser "solid" (escuro) se estiver com scroll OU se não for a home page
+  const isSolid = isScrolled || !isHomePage;
+
   return (
     <header
       className={cn(
         'fixed top-0 w-full z-50 transition-all duration-300 border-b',
-        isScrolled
+        isSolid
           ? 'bg-white/80 backdrop-blur-md border-black/5 py-3'
           : 'bg-transparent border-transparent py-6'
       )}
@@ -47,7 +53,7 @@ export function Header() {
             height={50} 
             className={cn(
               "h-8 w-auto object-contain transition-all duration-300",
-              isScrolled ? "brightness-0" : "brightness-0 invert"
+              isSolid ? "brightness-0" : "brightness-0 invert"
             )} 
           />
         </Link>
@@ -55,7 +61,7 @@ export function Header() {
         {/* Desktop Nav */}
         <nav className={cn(
           "hidden md:flex items-center space-x-8",
-          isScrolled ? "text-black" : "text-white"
+          isSolid ? "text-black" : "text-white"
         )}>
           {navItems.map((item) => (
             <Link
@@ -70,13 +76,13 @@ export function Header() {
 
         <Sheet>
           <SheetTrigger
-            className="md:hidden"
-            render={
-              <Button variant="ghost" size="icon" className={cn("hover:bg-transparent", isScrolled ? "text-black" : "text-white")}>
-                <Menu className="h-6 w-6" />
-              </Button>
-            }
-          />
+            className={cn(
+              "md:hidden inline-flex items-center justify-center rounded-lg size-8 transition-colors hover:bg-muted/20",
+              isSolid ? "text-black" : "text-white"
+            )}
+          >
+            <Menu className="h-6 w-6" />
+          </SheetTrigger>
           <SheetContent side="right" className="w-[85vw] sm:w-[400px] p-8">
             <div className="flex flex-col h-full mt-12">
               <nav className="flex flex-col space-y-6">

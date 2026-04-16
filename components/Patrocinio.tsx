@@ -3,14 +3,7 @@
 import * as React from 'react';
 import Image from 'next/image';
 import { motion } from 'motion/react';
-
-const sponsors = [
-  { name: 'Cultura Brasil', logo: '/images/patrocinadores/sponsor1.jpg' },
-  { name: 'Banco das Artes', logo: '/images/patrocinadores/sponsor2.jpg' },
-  { name: 'Fundação Palco', logo: '/images/patrocinadores/sponsor3.jpg' },
-  { name: 'Prefeitura Municipal', logo: '/images/patrocinadores/sponsor4.jpg' },
-  { name: 'Incentivo Federal', logo: '/images/patrocinadores/sponsor5.jpg' },
-];
+import { patrocinadores as sponsors } from '@/lib/data-index';
 
 export function Patrocinio() {
   return (

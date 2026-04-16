@@ -1,0 +1,39 @@
+﻿{
+  "slug": "alma-sobe-chao-desce",
+  "title": "Alma Sobe Chão Desce",
+  "category": "Comédia",
+  "year": "2024",
+  "status": "Em Cartaz",
+  "image": "/images/espetaculos/almasome/20260410_211201.jpg",
+  "heroImage": "/images/espetaculos/almasome/20260410_211201.jpg",
+  "synopsis": "Uma fábula contemporânea que nasce da cultura popular e atravessa a espiritualidade do povo, o silêncio imposto aos invisíveis e a força da transformação. Um espetáculo sobre dignidade, metamorfose e libertação onde cada corpo em cena carrega memória, resistência e esperança.",
+  "cast": [
+    { "name": "Giordano Zel", "role": "Elenco" },
+    { "name": "Lucas Garcia", "role": "Elenco" },
+    { "name": "Natali Cruz", "role": "Elenco" },
+    { "name": "Pedro Paulo Mota", "role": "Elenco" }
+  ],
+  "techSheet": [
+    { "label": "Texto e Direção", "value": "Thiago Thião" },
+    { "label": "Direção Musical", "value": "Lucas Henning" },
+    { "label": "Preparação Vocal", "value": "Ana Melo" },
+    { "label": "Mascareiro", "value": "Bruno Wozniack" },
+    { "label": "Dir. de Produção e Figurino", "value": "Hevellin Braga" },
+    { "label": "Assistente de Produção", "value": "Letícia Mendes" }
+  ],
+  "support": "Associação Cultural Caminhos da Cena",
+  "gallery": [
+    { "image": "/images/espetaculos/almasome/20260410_211201.jpg" },
+    { "image": "/images/espetaculos/almasome/20260410_212036.jpg" },
+    { "image": "/images/espetaculos/almasome/20260410_212805.jpg" },
+    { "image": "/images/espetaculos/almasome/20260410_213312.jpg" },
+    { "image": "/images/espetaculos/almasome/20260410_214222.jpg" },
+    { "image": "/images/espetaculos/almasome/20260410_214825.jpg" },
+    { "image": "/images/espetaculos/almasome/20260410_215126.jpg" },
+    { "image": "/images/espetaculos/almasome/20260410_215204.jpg" },
+    { "image": "/images/espetaculos/almasome/20260410_215209.jpg" },
+    { "image": "/images/espetaculos/almasome/20260410_215211.jpg" },
+    { "image": "/images/espetaculos/almasome/20260410_215217.jpg" },
+    { "image": "/images/espetaculos/almasome/20260410_215858.jpg" }
+  ]
+}

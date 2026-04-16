@@ -1,0 +1,153 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "noticias"
+    label: "Notícias"
+    folder: "content/noticias"
+    create: true
+    slug: "{{slug}}"
+    extension: "json"
+    format: "json"
+    fields:
+      - { label: "ID", name: "id", widget: "hidden", default: "news-{{timestamp}}" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Data", name: "date", widget: "string", hint: "Ex: 12 Abr, 2024" }
+      - { label: "Resumo", name: "excerpt", widget: "text" }
+      - { label: "Conteúdo", name: "content", widget: "markdown" }
+      - { label: "Imagem Principal", name: "image", widget: "image" }
+      - {
+          label: "Galeria",
+          name: "gallery",
+          widget: "list",
+          summary: "{{fields.image}}",
+          field: { label: "Imagem", name: "image", widget: "image" },
+          required: false
+        }
+
+  - name: "galeria"
+    label: "Galeria de Fotos"
+    folder: "content/galeria"
+    create: true
+    slug: "{{title}}"
+    extension: "json"
+    format: "json"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Ano", name: "year", widget: "string", hint: "Ex: 2024" }
+      - { label: "Imagem", name: "image", widget: "image" }
+
+  - name: "patrocinadores"
+    label: "Patrocinadores e Apoio"
+    folder: "content/patrocinadores"
+    create: true
+    slug: "{{name}}"
+    extension: "json"
+    format: "json"
+    fields:
+      - { label: "Nome", name: "name", widget: "string" }
+      - { label: "Logotipo", name: "logo", widget: "image" }
+
+  - name: "espetaculos"
+    label: "Espetáculos"
+    folder: "content/espetaculos"
+    create: true
+    slug: "{{slug}}"
+    extension: "json"
+    format: "json"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Categoria", name: "category", widget: "string", hint: "Ex: Comédia, Drama, Musical" }
+      - { label: "Ano de Lançamento", name: "year", widget: "string" }
+      - { 
+          label: "Status", 
+          name: "status", 
+          widget: "select", 
+          options: ["Em Cartaz", "Em Turnê", "Encerrado", "Pré-produção"],
+          default: "Em Cartaz"
+        }
+      - { label: "Imagem de Capa (Card)", name: "image", widget: "image" }
+      - { label: "Imagem do Banner (Hero)", name: "heroImage", widget: "image" }
+      - { label: "Sinopse", name: "synopsis", widget: "markdown" }
+      - { 
+          label: "Elenco / Equipe (Integrantes)", 
+          name: "cast", 
+          widget: "list", 
+          summary: "{{fields.name}} - {{fields.role}}",
+          fields: [
+            { 
+              label: "Integrante", 
+              name: "name", 
+              widget: "select", 
+              options: { collection: "integrantes", value_field: "name", display_field: "name" }
+            },
+            { label: "Papel / Função nesta peça", name: "role", widget: "string", hint: "Ex: Ator, Iluminador, Diretor" }
+          ]
+        }
+      - { 
+          label: "Ficha Técnica Geral", 
+          name: "techSheet", 
+          widget: "list", 
+          summary: "{{fields.label}}: {{fields.value}}",
+          fields: [
+            { label: "Rótulo", name: "label", widget: "string", hint: "Ex: Figurino, Cenografia" },
+            { label: "Nome(s) / Valor", name: "value", widget: "string" }
+          ]
+        }
+      - { label: "Apoio / Patrocínio", name: "support", widget: "string", required: false }
+      - { 
+          label: "Galeria de Fotos", 
+          name: "gallery", 
+          widget: "list", 
+          field: { label: "Imagem", name: "image", widget: "image" } 
+        }
+
+  - name: "integrantes"
+    label: "Integrantes"
+    folder: "content/integrantes"
+    create: true
+    slug: "{{name}}"
+    extension: "json"
+    format: "json"
+    fields:
+      - { label: "Nome Completo", name: "name", widget: "string" }
+      - { 
+          label: "Funções Padrão", 
+          name: "roles", 
+          widget: "list", 
+          summary: "{{fields.role}}",
+          field: { label: "Função", name: "role", widget: "string", hint: "Ex: Ator, Diretor, etc." }
+        }
+      - { 
+          label: "Categoria", 
+          name: "category", 
+          widget: "select", 
+          options: ["Elenco", "Direção & Produção", "Equipe Artística", "Associação"],
+          default: "Elenco"
+        }
+      - { label: "Foto", name: "image", widget: "image", default: "/images/integrantes/placeholder.jpg" }
+      - { label: "Instagram (URL)", name: "instagram", widget: "string", required: false, default: "https://instagram.com/" }
+      - { label: "Bio Curta", name: "bio", widget: "text", required: false }
+
+  - name: "clipping"
+    label: "Clipping"
+    folder: "content/clipping"
+    create: true
+    slug: "{{slug}}"
+    extension: "json"
+    format: "json"
+    fields:
+      - { label: "ID", name: "id", widget: "hidden", default: "clipping-{{timestamp}}" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Fonte", name: "source", widget: "string", hint: "Ex: Jornal de Artes" }
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Data", name: "date", widget: "string", hint: "Ex: Março 2024" }
+      - { label: "Resumo", name: "summary", widget: "text" }
+      - { label: "Conteúdo Completo", name: "fullContent", widget: "markdown" }
+      - { label: "Link da Matéria Original", name: "href", widget: "string", required: false, default: "#" }

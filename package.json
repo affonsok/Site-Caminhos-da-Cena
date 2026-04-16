@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "sync-cms": "node scripts/sync-cms.mjs",
+    "predev": "npm run sync-cms",
     "dev": "next dev",
+    "prebuild": "npm run sync-cms",
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
