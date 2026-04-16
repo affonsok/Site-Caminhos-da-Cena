@@ -12,6 +12,53 @@
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
   
   <script>
+    // Configuração de Tradução para Português
+    window.repoFiles = window.repoFiles || {};
+    
+    // Custom Slug Widget
+    CMS.registerWidget('slug_auto', createClass({
+      slugify: function(text) {
+        if (!text) return '';
+        return text
+          .toString()
+          .toLowerCase()
+          .trim()
+          .normalize('NFD')
+          .replace(/[\u0300-\u036f]/g, '')
+          .replace(/\s+/g, '-')
+          .replace(/[^\w\-]+/g, '')
+          .replace(/\-\-+/g, '-')
+          .replace(/^-+/, '')
+          .replace(/-+$/, '');
+      },
+      handleChange: function(e) {
+        this.props.onChange(e.target.value);
+      },
+      componentDidUpdate: function(prevProps) {
+        const { value, entry, onChange } = this.props;
+        // Se o valor estiver vazio, tenta gerar a partir do title ou name
+        if (!value) {
+          const title = entry.getIn(['data', 'title']) || entry.getIn(['data', 'name']);
+          if (title) {
+            const generated = this.slugify(title);
+            if (generated && generated !== value) {
+              onChange(generated);
+            }
+          }
+        }
+      },
+      render: function() {
+        return h('input', {
+          id: this.props.forID,
+          className: this.props.classNameWrapper,
+          type: 'text',
+          value: this.props.value || '',
+          placeholder: 'Gera automaticamente ou digite manualmente...',
+          onChange: this.handleChange,
+        });
+      }
+    }));
+
     if (window.netlifyIdentity) {
       window.netlifyIdentity.on("init", (user) => {
         if (!user) {

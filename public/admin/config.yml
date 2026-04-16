@@ -17,7 +17,7 @@ collections:
     summary: "{{title}} ({{date}})"
     fields:
       - { label: "ID", name: "id", widget: "hidden", default: "news-{{timestamp}}" }
-      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "slug_auto" }
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Data", name: "date", widget: "string", hint: "Ex: 12 Abr, 2024" }
       - { label: "Resumo", name: "excerpt", widget: "text" }
@@ -67,7 +67,7 @@ collections:
     summary: "{{title}} ({{year}})"
     fields:
       - { label: "Título", name: "title", widget: "string" }
-      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "slug_auto" }
       - { label: "Categoria", name: "category", widget: "string", hint: "Ex: Comédia, Drama, Musical" }
       - { label: "Ano de Lançamento", name: "year", widget: "string" }
       - { 
@@ -154,7 +154,7 @@ collections:
     summary: "{{title}} ({{source}})"
     fields:
       - { label: "ID", name: "id", widget: "hidden", default: "clipping-{{timestamp}}" }
-      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "slug_auto" }
       - { label: "Fonte", name: "source", widget: "string", hint: "Ex: Jornal de Artes" }
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Data", name: "date", widget: "string", hint: "Ex: Março 2024" }
