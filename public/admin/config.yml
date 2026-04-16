@@ -78,7 +78,13 @@ collections:
     fields:
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Slug", name: "slug", widget: "slug_auto" }
-      - { label: "Categoria", name: "category", widget: "string", hint: "Ex: Comédia, Drama, Musical" }
+      - { 
+          label: "Categoria", 
+          name: "category", 
+          widget: "select", 
+          create: true,
+          options: ["Comédia", "Drama", "Musical", "Experimental", "Infantil", "Teatro de Rua"]
+        }
       - { label: "Ano de Lançamento", name: "year", widget: "string" }
       - { 
           label: "Status", 
@@ -105,7 +111,13 @@ collections:
               value_field: "name",
               display_fields: ["name"]
             },
-            { label: "Papel / Função nesta peça", name: "role", widget: "string", hint: "Ex: Ator, Iluminador, Diretor" }
+            { 
+              label: "Papel / Função nesta peça", 
+              name: "role", 
+              widget: "select", 
+              create: true,
+              options: ["Elenco", "Ator", "Atriz", "Direção", "Produção", "Iluminação", "Cenografia", "Figurino", "Sonoplastia"]
+            }
           ]
         }
       - { 
@@ -114,7 +126,13 @@ collections:
           widget: "list", 
           summary: "{{fields.label}}: {{fields.value}}",
           fields: [
-            { label: "Rótulo", name: "label", widget: "string", hint: "Ex: Figurino, Cenografia" },
+            { 
+              label: "Rótulo", 
+              name: "label", 
+              widget: "select", 
+              create: true,
+              options: ["Texto e Direção", "Direção Musical", "Preparação Vocal", "Mascareiro", "Dir. de Produção e Figurino", "Assistente de Produção", "Trilha Sonora", "Projeções", "Cenografia", "Duração", "Classificação"]
+            },
             { label: "Nome(s) / Valor", name: "value", widget: "string" }
           ]
         }
@@ -139,13 +157,16 @@ collections:
       - { 
           label: "Funções Padrão", 
           name: "roles", 
-          widget: "list", 
-          field: { label: "Função", name: "role", widget: "string", hint: "Ex: Ator, Diretor, etc." }
+          widget: "select", 
+          multiple: true,
+          create: true,
+          options: ["Ator", "Atriz", "Diretor", "Diretora", "Dramaturgo", "Dramaturga", "Preparação Vocal", "Mascareiro", "Direção de Produção", "Figurino", "Assistente de Produção", "Direção Musical"]
         }
       - { 
           label: "Categoria", 
           name: "category", 
           widget: "select", 
+          create: true, 
           options: ["Elenco", "Direção & Produção", "Equipe Artística", "Associação"],
           default: "Elenco"
         }
