@@ -8,7 +8,7 @@ export interface NewsItem {
   excerpt: string;
   content: string;
   image: string;
-  gallery?: string[] | { image: string }[];
+  gallery?: string[];
 }
 
 export const news: NewsItem[] = newsData.map(item => ({
